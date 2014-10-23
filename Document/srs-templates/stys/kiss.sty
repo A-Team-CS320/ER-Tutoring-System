@@ -1,0 +1,155 @@
+%
+% KISS Document Format kiss.sty
+%
+% Created by:  Emmett Sheppard (ess) - 24/6/99
+%
+
+% Use the xspace package, for space determination at the end of macros
+\RequirePackage{stys/xspace}\typeout{Using xspace to fix macro spacing.}
+
+\RequirePackage{fancyhdr}\typeout{Using fancier footers than usual.}
+
+\RequirePackage[Bjarne]{stys/fncychap}\typeout{Using fancy chapter headings.}
+
+% Use this to set the font family for headers and other decor:
+\newcommand{\kiss@HeaderFamily}{\sffamily} 
+
+
+% Augment the sectioning commands used to get our own font family in place,
+% and reset some internal data items:
+
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+                                    {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                    {2.3ex \@plus.2ex}%
+                                    {\reset@font\Large\kiss@HeaderFamily}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+                                    {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                    {1.5ex \@plus .2ex}%
+                                    {\reset@font\large\kiss@HeaderFamily}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+                                    {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                    {1.5ex \@plus .2ex}%
+                                    {\reset@font\normalsize\kiss@HeaderFamily}}
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {-1em}%
+                                    {\reset@font\normalsize\kiss@HeaderFamily}}
+\renewcommand{\subparagraph}{\@startsection{subparagraph}{5}{\parindent}%
+                                    {3.25ex \@plus1ex \@minus .2ex}%
+                                    {-1em}%
+                                    {\reset@font\normalsize\kiss@HeaderFamily}}
+
+
+% This sets up the fancy chapter headings that make the documents look
+% at least a little better than the usual LaTeX output.
+%
+\@ifundefined{ChTitleVar}{}{
+  \ChNameVar{\raggedleft\tiny\kiss@HeaderFamily}
+  \ChNumVar{\raggedleft \bfseries\Large\kiss@HeaderFamily}
+  \ChTitleVar{\raggedleft \rm\Huge\kiss@HeaderFamily}
+  % This creates chapter heads without the leading \vspace*{}:
+  \def\@makechapterhead#1{%
+    {\parindent \z@ \raggedright \normalfont
+      \ifnum \c@secnumdepth >\m@ne
+        \DOCH
+      \fi
+      \interlinepenalty\@M
+      \DOTI{#1}
+    }
+  }
+}
+
+
+
+%%
+%% redefine the Abstract Format
+%%
+
+%\renewenvironment{abstract}{%
+%    \thispagestyle{empty}
+%    \vspace*{2in}
+%    \begin{center}
+%	\Large\kiss@HeaderFamily{Abstract \\}
+%    \end{center}
+%}{}
+
+
+
+
+
+%%
+%% redefine the heading for toc
+%%
+
+\renewcommand{\tableofcontents}{\@restonecolfalse
+ \if@twocolumn\@restonecoltrue\onecolumn
+ \fi\section*{CONTENTS\@mkboth{TABLE OF CONTENTS}{TABLE OF CONTENTS}}
+ \@starttoc{toc}\if@restonecol\twocolumn\fi}
+
+
+
+
+%%
+%% redefine the heading for lof
+%%
+
+\renewcommand{\listoffigures}{\@restonecolfalse
+ \if@twocolumn\@restonecoltrue\onecolumn
+ \fi\section*{LIST OF FIGURES\@mkboth
+ {LIST OF FIGURES}{LIST OF FIGURES}}
+ \addcontentsline{toc}{section}{LIST OF FIGURES}\@starttoc{lof}\if@restonecol
+ \twocolumn\fi}
+
+
+
+
+%%
+%% redefine the heading of lot
+%%
+
+\renewcommand{\listoftables}{\@restonecolfalse
+ \if@twocolumn\@restonecoltrue\onecolumn
+ \fi\section*{LIST OF TABLES\@mkboth
+ {LIST OF TABLES}{LIST OF TABLES}}
+ \addcontentsline{toc}{section}{LIST OF TABLES}\@starttoc{lot}\if@restonecol
+ \twocolumn\fi}
+
+
+
+
+
+
+% Redefine the 'normal' header/footer style when using "fancyhdr" package:
+\@ifundefined{fancyhf}{}{
+  % Use \pagestyle{normal} as the primary pagestyle for text.
+  \fancypagestyle{normal}{
+    \fancyhf{}
+    \fancyfoot[LE,RO]{{\kiss@HeaderFamily\thepage}}
+    \fancyfoot[LO]{{\kiss@HeaderFamily\nouppercase{\rightmark}}}
+    \fancyfoot[RE]{{\kiss@HeaderFamily\nouppercase{\leftmark}}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+  }
+  % Update the plain style so we get the page number & footer line,
+  % but not a chapter or section title.  This is to keep the first
+  % page of a chapter and the blank page between chapters `clean.'
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LE,RO]{{\kiss@HeaderFamily\thepage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+  }
+  % Redefine \cleardoublepage so that the blank page between chapters
+  % gets the plain style and not the fancy style.  This is described
+  % in the documentation for the fancyhdr package by Piet von Oostrum.
+  \@ifundefined{chapter}{}{
+    \renewcommand{\cleardoublepage}{
+      \clearpage\if@openright \ifodd\c@page\else
+      \hbox{}
+      \thispagestyle{plain}
+      \newpage
+      \if@twocolumn\hbox{}\newpage\fi\fi\fi
+    }
+  }
+}
+

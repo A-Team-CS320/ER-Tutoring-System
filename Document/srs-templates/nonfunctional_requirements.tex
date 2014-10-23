@@ -1,0 +1,546 @@
+\chapter{Non-functional Requirements}
+
+\section{Environmental}
+
+\subsection{ENV-01: Game will run on multiple platforms}
+\textbf{Description}: The game should run on iOS and Android devices as well
+as Facebook through a modern browser.
+
+\subsection{ENV-02: Game will support all screen sizes regardless of platform}
+\textbf{Description}: The game will run on all sizes of iOS and Android screens.
+
+\subsection{ENV-03: Game will be in a portrait view with a flexible aspect ratio}
+\textbf{Description}: Our game will be displayed in portrait mode only. The
+aspect ratio will be exactly the same on all platforms, regardless
+of the screen\textquoteright{}s true aspect ratio. When fitting the
+display to the device\textquoteright{}s screen, the image will be
+scaled, and there may or may not be blank space along the edge of
+the screen to accommodate the change in aspect ratio.
+
+\subsection{ENV-04: Game resolution will use vector graphics to scale viewport}
+\textbf{Description}: The game will use vector graphics for all of
+the graphical components (menus, avatars, sprites, etc.) so that scaling
+does not cause pixelation issue on platforms with larger screens. 
+
+\subsection{ENV-05: The user should be able to mute the in-game sound }
+\textbf{Description}: The in-game sound should be split up into two different
+groups, background music and sound effects. The two should be able
+muted/unmuted independently of each other.
+
+\subsection{ENV-06: The user does not need to finish the game in one sitting}
+\textbf{Description}: The target user is someone who has a small amount of
+free time, for example sitting on a bus. The game should be \textquotedblleft{}addicting\textquotedblright{}
+and make the user want to play repeatedly, but individual games should
+be fairly short. The user will also be able to pause the game, and
+continue at a later time.
+
+\subsection{ENV-07: The Pause button will be displayed on the screen{[}s{]}}
+\textbf{Description}: The top-right corner of the screen during gameplay will
+always feature the pause button (except when in pause mode), which
+can be pressed at any time during gameplay.
+
+\subsection{ENV-08: The menu screens will display the user\textquoteright{}s
+current level}
+\textbf{Description}: The top-right corner of the screen while the user is
+navigating the menus should always say what level the user is currently
+at and their progress within that level.
+
+\subsection{ENV-09: The screen should tell the user how much money they have.}
+\textbf{Description}: The top-left corner of the screen should always say how
+much in-game currency the user has remaining.
+
+\subsection{ENV-10: The store will have a list of categories for the user to
+choose. }
+\textbf{Description}: Clicking on each of the categories will bring the user
+to a scrollable menu featuring all of the relevant items to the category.
+The user will then be able to purchase the items. 
+
+\subsection{ENV-11: The user will have access to global and friend-only leaderboards}
+\textbf{Description}: The user will be able to access a global leaderboard
+or a leaderboard of his/her Facebook friends. There will be a toggle
+button to switch between the two views.
+
+\section{Performance}
+
+\subsection{PER-01: Small game file size (<50 megabytes)}
+\chapter{Non-functional Requirements}
+
+\section{Environmental}
+
+\subsection{ENV-01: Game will run on multiple platforms}
+\textbf{Description}: The game should run on iOS and Android devices as well
+as Facebook through a modern browser.
+
+\subsection{ENV-01: Game will support all screen sizes regardless of platform}
+\textbf{Description}: The game will run on all sizes of iOS and Android screens.
+
+\subsection{ENV-02: Game will be in a portrait view with a flexible aspect ratio}
+\textbf{Description}: Our game will be displayed in portrait mode only. The
+aspect ratio will be exactly the same on all platforms, regardless
+of the screen\textquoteright{}s true aspect ratio. When fitting the
+display to the device\textquoteright{}s screen, the image will be
+scaled, and there may or may not be blank space along the edge of
+the screen to accommodate the change in aspect ratio.
+
+\subsection{ENV-03: Game resolution will use vector graphics to scale viewport}
+\textbf{Description}: The game will use vector graphics for all of
+the graphical components (menus, avatars, sprites, etc.) so that scaling
+does not cause pixelation issue on platforms with larger screens. 
+
+\subsection{ENV-02: The user should be able to mute the in-game sound }
+\textbf{Description}: The in-game sound should be split up into two different
+groups, background music and sound effects. The two should be able
+muted/unmuted independently of each other.
+
+\subsection{ENV-03: The user does not need to finish the game in one sitting}
+\textbf{Description}: The target user is someone who has a small amount of
+free time, for example sitting on a bus. The game should be \textquotedblleft{}addicting\textquotedblright{}
+and make the user want to play repeatedly, but individual games should
+be fairly short. The user will also be able to pause the game, and
+continue at a later time.
+
+\subsection{ENV-04: The Pause button will be displayed on the screen{[}s{]}}
+\textbf{Description}: The top-right corner of the screen during gameplay will
+always feature the pause button (except when in pause mode), which
+can be pressed at any time during gameplay.
+
+\subsection{ENV-05: The menu screens will display the user\textquoteright{}s
+current level}
+\textbf{Description}: The top-right corner of the screen while the user is
+navigating the menus should always say what level the user is currently
+at and their progress within that level.
+
+\subsection{ENV-06: The screen should tell the user how much money they have.}
+\textbf{Description}: The top-left corner of the screen should always say how
+much in-game currency the user has remaining.
+
+\subsection{ENV-07: The store will have a list of categories for the user to
+choose. }
+\textbf{Description}: Clicking on each of the categories will bring the user
+to a scrollable menu featuring all of the relevant items to the category.
+The user will then be able to purchase the items. 
+
+\subsection{ENV-08: The user will have access to global and friend-only leaderboards}
+\textbf{Description}: The user will be able to access a global leaderboard
+or a leaderboard of his/her Facebook friends. There will be a toggle
+button to switch between the two views.
+
+\section{Performance}
+
+\subsection{PER-01: Small game file size (<50 megabytes)}
+\textbf{Description}: As there is a fairly limited amount of content in Line
+Bounce, and we have decided not to implement a level-based game structure,
+we should be able to keep our game size down to under 50 MB. Over
+a 3G connection speed of 200 KB/s, the game file should not take any
+longer than 3 minutes to download. Over a 4G connection speed of 1
+MB/s, the game file wouldn\textquoteright{}t take any more than a
+minute to download. All Wi-Fi connections are different, so the two
+above listed download rates should be used as benchmarks to gauge
+how quickly the game file can be downloaded
+
+\subsection{PER-02: Non-maximum CPU usage}
+\textbf{Description}: Our application should occupy no more than 80\% of the
+mobile device\textquoteright{}s CPU during gameplay for rendering
+the game. 
+
+\subsection{PER-03: Game frame rate of at least 30 frames per second}
+\textbf{Description}: Game will run at 30 frames per second to ensure smoothness
+of animation and game speed.
+
+\subsection{PER-04: Fast menu response time}
+\textbf{Description}: For the menu, response time should be reasonably fast
+so as not to infuriate users, so a 0.01-0.25 second window of lag
+time will be implemented.
+
+\subsection{PER-05: Fast in-game response time}
+\textbf{Description}: The actual gameplay, we must provide a responsiveness
+that appears to be near-instantaneous to the human eye. The amount of lag time
+should be less than 24-33 milliseconds for each action. This includes
+time will be implemented.
+
+\subsection{PER-05: Fast in-game response time}
+\textbf{Description}: The actual gameplay, we must provide a responsiveness
+that appears to be near-instantaneous to the human eye. The amount of lag time
+should be less than 33 milliseconds for each action. This includes
+the lag time between the moment a user presses the screen to draw
+a line and when it appears on screen. It also includes the time between
+the obtaining of a power-up and the assimilation of its effects.
+
+\subsection{PER-06: Fast database access}
+\textbf{Description}: When accessing the store, and when logging in, the delay
+time will remain under 5 seconds. The user\textquoteright{}s device
+must access the server, which accesses the stored data in the Database,
+and then the data is sent back to the user. So the speed of both the
+user accessing the server and the server communicating with the DB
+to under 2 seconds each.
+
+\section{Accuracy}
+
+\subsection{ACC-01: Input response should be accurate}
+\textbf{Description}: The game should respond accurately, where touch and mouse
+input should respond in the correct location on the screen. This will
+be with an accuracy of +/- 2 pixels.{[}e{]}
+
+\subsection{ACC-02: Straight line approximation of path that player draws}
+\textbf{Description}: The player draws a platform for the avatar to bounce
+from by touching and dragging across the screen, and then lifting
+their finger to mark the end of the platform. The accuracy of this
+is reliant on the API used to gather the touch information, which
+will differ between iOS and Android as well as among the individual
+devices using these platforms. On Facebook this accuracy is inherent,
+as the mouse is a much more exact means of drawing than a finger.
+The first touch and lifting of the finger will mark the start and
+end of the line. For the Facebook game, the left click, drag and release
+of the left click will mark the start and end of the line respectively.
+
+\subsection{ACC-03: Accidental touches will be ignored by the game engine}
+\textbf{Description}: The game will ignore taps (without finger dragging) in
+the main, gameplay portion of the screen, as only swipes draw platforms
+in game and this prevents accidental touches. The user will have to
+drag their finger a distance at least equal to the width of the avatar
+in order for the line to register. The pause button, however, will
+be activated by single-point touches, and not by swipes.
+
+\subsection{ACC-04: People with larger fingers will still be able to play the game}
+\textbf{Description}: For people with larger fingers their line will start
+drawing where the middle of their finger touches the screen , allowing
+even large fingers to draw lines with a reasonable degree of accuracy.
+When playing the game on Facebook this is not an issue, as the mouse
+is used to draw lines. 
+
+\subsection{ACC-05: In an optimal game the player climbs forever}
+\textbf{Description}: While an optimal game is not technically possible it
+allows us to set a standard. A good game would be one where the player
+reaches a new high score for their avatar\textquoteright{}s height,
+reaching a higher point on the map than previously achieved. The map
+will auto-generate as the avatar climbs. At least the height of two
+screens will be generated past the top of the screen in preparation
+for the avatar to climb.
+
+\subsection{ACC-06: Avatar will bounce upon touching the platform}
+\textbf{Description}: The avatar should bounce off of a platform as long as
+the avatar touches the platform and they have downward velocity.
+
+\subsection{ACC-07: Bounce acceleration calculation has at least 3 significant figures}
+\textbf{Description}: When the avatar collides with a platform the acceleration
+due to this bounce must be correctly calculated to within at least
+6 significant figures. Using linear algebraic mathematical formulas,
+the game will calculate the angle that the avatar collided with a
+platform and find the reflection vector. That information is then
+used to apply an impulse to the avatar in the appropriate direction
+with an accurate acceleration based on the size of the line as stated
+in FUN-23.
+
+\subsection{ACC-08: Avatar will die upon touching any portion of an enemy}
+\textbf{Description}: As long as a portion of the user\textquoteright{}s sprite
+touches touches an enemy, the user will either die or lose their shield
+if they have a shield powerup equipped.
+
+\section{Robustness}
+
+\subsection{ROB-01: Game should never crash the user\textquoteright{}s device}
+\textbf{Description}: The game will never cause a fatal crash of the user\textquoteright{}s
+device. The game may crash but should never crash the device itself.
+
+\subsection{ROB-02: Buttons should always perform desired functionality}
+\textbf{Description}: The buttons should be straightforward in what they do
+and the user should never have to question what a button does.
+
+\subsection{ROB-03: The game must never corrupt any database}
+\textbf{Description}: Game player status and payment records must never be
+lost, especially after crash or loss of connection. No queries sent
+to the database should corrupt any tables.
+
+\subsection{ROB-04: Purchases should be easily recovered}
+\textbf{Description}: A recovery function linked to the account of the player
+will be implemented. This will allow the user to sync any data to
+their platform if something is to go wrong with the auto-sync functionality.
+It is accessible in the Settings menu.
+
+\subsection{ROB-05: The game will be easily extensible}
+\textbf{Description}: It will be easy to add new features to the game. This
+may include game modes, power-ups, enemy types, store categories and
+avatar customization.
+
+\section{Safety}
+
+\subsection{SAF-01: Game should be family friendly (G-rated)}
+\textbf{Description}: Game will be made suitable to play for all audiences.
+
+\subsection{SAF-02: Warn users of extended play sessions}
+\textbf{Description}: The game will warn users who have been playing for a
+long continuous period of time that they should take a break (\textquotedblleft{}It
+appears you\textquoteright{}ve been playing for a while, please take
+a break\textquotedblright{}). However, the game will never force users
+to exit. This will happen after two hours of continuous play.
+
+\subsection{SAF-03: Bugs should be easily patchable}
+\textbf{Description}: The application should be written in a clear, concise
+manner and thoroughly abstracted and DRYed (Don\textquoteright{}t
+Repeat Yourself) out so that writing patches for bugs is simple and
+easy. A single code-base ensures that one patch will fix the bug for
+every platform
+
+\subsection{SAF-04: Game should keep track of in-game purchases}
+\textbf{Description}: Local and remote purchase tracking required. This data
+will be automatically synced if needed (e.g. The user plays a game
+on a different platform than the one they made purchases on). 
+
+\subsection{SAF-05: Confirm transaction details}
+\textbf{Description}: Before processing transaction, ask customer to confirm
+the transaction details. A small popup will be displayed on the current
+page with the item the user is purchasing as well as the price they
+are agreeing to pay.
+
+\subsection{SAF-06: Game will include a fail-soft database}
+\textbf{Description}: Keep database information minimal so that the game does
+not have to connect to the database very often. There will also be
+a second database that will be synced up regularly with the original
+in case of a failure.
+
+\subsection{SAF-07: Backup database regularly}
+\textbf{Description}: The database will be backed up every 15 minutes to minimize
+lost customer purchases.
+
+\section{Security}
+
+\subsection{SEC-01: Game will use Facebook authentication}
+\textbf{Description}: Facebook OAuth will be used for authentication. This
+allows the user to log in to their Facebook account securely. The
+game will need to use OAuth correctly for the game to be secure. Facebook
+provides information on correct implementation.
+
+\subsection{SEC-02: Game will use Facebook payment system}
+\textbf{Description}: Facebook\textquoteright{}s API for secure payment transactions
+will be used, as requested by the client. This is the only method
+of payment accepted. The game will need to use the Facebook payment
+system correctly for the game to be secure. Facebook provides information
+on correct implementation. Transactions will not be lost, as specified
+in ROB-02.
+
+\subsection{SEC-03: Data will be stored on a secure database server}
+\textbf{Description}: User purchase history and scores will be stored on the
+server. The database will only be accessed by the game server, not
+the game clients. This allows for only the game server to hold the
+credentials to the database. 
+
+\subsection{SEC-04: Data storage for both client and server}
+\textbf{Description}: Server-side data will be used as temporary storage until
+the secure database is updated with the user\textquoteright{}s progress.
+It will push the changes to the database when the user logs out of
+Facebook or a connection is lost. Client-side data will be for the
+user to play in offline mode if he/she does not want to utilize these
+features or if they does not currently have an active internet connection.
+
+\subsection{SEC-05: Data will be sanitized}
+\textbf{Description}: Data sanitization will protect against attacks by malicious
+users. For all input boxes, the use of HTML tags, JavaScript or any
+other possible code that could jeopardize the security of the game
+\textbf{Description}: As there is a fairly limited amount of content in Line
+Bounce, and we have decided not to implement a level-based game structure,
+we should be able to keep our game size down to under 50 MB. Over
+a 3G connection speed of 200 KB/s, the game file should not take any
+longer than 3 minutes to download. Over a 4G connection speed of 1
+MB/s, the game file wouldn\textquoteright{}t take any more than a
+minute to download. All Wi-Fi connections are different, so the two
+above listed download rates should be used as benchmarks to gauge
+how quickly the game file can be downloaded
+
+\subsection{PER-02: Non-maximum CPU usage}
+\textbf{Description}: Our application should occupy no more than 80\% of the
+mobile device\textquoteright{}s CPU during gameplay for rendering
+the game. 
+
+\subsection{PER-03: Game frame rate of at least 30 frames per second}
+\textbf{Description}: Game will run at 30 frames per second to ensure smoothness
+of animation and game speed.
+
+\subsection{PER-04: Fast menu response time}
+\textbf{Description}: For the menu, response time should be reasonably fast
+so as not to infuriate users, so a 0.01-0.25 second window of lag
+time will be implemented.
+
+\subsection{PER-05: Fast in-game response time}
+\textbf{Description}: The actual gameplay, we must provide a responsiveness
+that appears to be near-instantaneous to the human eye. The amount of lag time
+should be less than 24-33 milliseconds for each action. This includes
+time will be implemented.
+
+\subsection{PER-05: Fast in-game response time}
+\textbf{Description}: The actual gameplay, we must provide a responsiveness
+that appears to be near-instantaneous to the human eye. The amount of lag time
+should be less than 33 milliseconds for each action. This includes
+the lag time between the moment a user presses the screen to draw
+a line and when it appears on screen. It also includes the time between
+the obtaining of a power-up and the assimilation of its effects.
+
+\subsection{PER-06: Fast database access}
+\textbf{Description}: When accessing the store, and when logging in, the delay
+time will remain under 5 seconds. The user\textquoteright{}s device
+must access the server, which accesses the stored data in the Database,
+and then the data is sent back to the user. So the speed of both the
+user accessing the server and the server communicating with the DB
+to under 2 seconds each.
+
+\section{Accuracy}
+
+\subsection{ACC-01: Input response should be accurate}
+\textbf{Description}: The game should respond accurately, where touch and mouse
+input should respond in the correct location on the screen. This will
+be with an accuracy of +/- 2 pixels.{[}e{]}
+
+\subsection{ACC-02: Straight line approximation of path that player draws}
+\textbf{Description}: The player draws a platform for the avatar to bounce
+from by touching and dragging across the screen, and then lifting
+their finger to mark the end of the platform. The accuracy of this
+is reliant on the API used to gather the touch information, which
+will differ between iOS and Android as well as among the individual
+devices using these platforms. On Facebook this accuracy is inherent,
+as the mouse is a much more exact means of drawing than a finger.
+The first touch and lifting of the finger will mark the start and
+end of the line. For the Facebook game, the left click, drag and release
+of the left click will mark the start and end of the line respectively.
+
+\subsection{ACC-03: Accidental touches will be ignored by the game engine}
+\textbf{Description}: The game will ignore taps (without finger dragging) in
+the main, gameplay portion of the screen, as only swipes draw platforms
+in game and this prevents accidental touches. The user will have to
+drag their finger a distance at least equal to the width of the avatar
+in order for the line to register. The pause button, however, will
+be activated by single-point touches, and not by swipes.
+
+\subsection{ACC-04: People with larger fingers will still be able to play the game}
+\textbf{Description}: For people with larger fingers their line will start
+drawing where the middle of their finger touches the screen , allowing
+even large fingers to draw lines with a reasonable degree of accuracy.
+When playing the game on Facebook this is not an issue, as the mouse
+is used to draw lines. 
+
+\subsection{ACC-05: In an optimal game the player climbs forever}
+\textbf{Description}: While an optimal game is not technically possible it
+allows us to set a standard. A good game would be one where the player
+reaches a new high score for their avatar\textquoteright{}s height,
+reaching a higher point on the map than previously achieved. The map
+will auto-generate as the avatar climbs. At least the height of two
+screens will be generated past the top of the screen in preparation
+for the avatar to climb.
+
+\subsection{ACC-06: Avatar will bounce upon touching the platform}
+\textbf{Description}: The avatar should bounce off of a platform as long as
+the avatar touches the platform and they have downward velocity.
+
+\subsection{ACC-07: Bounce acceleration calculation has at least 3 significant figures}
+\textbf{Description}: When the avatar collides with a platform the acceleration
+due to this bounce must be correctly calculated to within at least
+6 significant figures. Using linear algebraic mathematical formulas,
+the game will calculate the angle that the avatar collided with a
+platform and find the reflection vector. That information is then
+used to apply an impulse to the avatar in the appropriate direction
+with an accurate acceleration based on the size of the line as stated
+in FUN-23.
+
+\subsection{ACC-08: Avatar will die upon touching any portion of an enemy}
+\textbf{Description}: As long as a portion of the user\textquoteright{}s sprite
+touches touches an enemy, the user will either die or lose their shield
+if they have a shield powerup equipped.
+
+\section{Robustness}
+
+\subsection{ROB-01: Game should never crash the user\textquoteright{}s device}
+\textbf{Description}: The game will never cause a fatal crash of the user\textquoteright{}s
+device. The game may crash but should never crash the device itself.
+
+\subsection{ROB-02: Buttons should always perform desired functionality}
+\textbf{Description}: The buttons should be straightforward in what they do
+and the user should never have to question what a button does.
+
+\subsection{ROB-03: The game must never corrupt any database}
+\textbf{Description}: Game player status and payment records must never be
+lost, especially after crash or loss of connection. No queries sent
+to the database should corrupt any tables.
+
+\subsection{ROB-04: Purchases should be easily recovered}
+\textbf{Description}: A recovery function linked to the account of the player
+will be implemented. This will allow the user to sync any data to
+their platform if something is to go wrong with the auto-sync functionality.
+It is accessible in the Settings menu.
+
+\subsection{ROB-05: The game will be easily extensible}
+\textbf{Description}: It will be easy to add new features to the game. This
+may include game modes, power-ups, enemy types, store categories and
+avatar customization.
+
+\section{Safety}
+
+\subsection{SAF-01: Game should be family friendly (G-rated)}
+\textbf{Description}: Game will be made suitable to play for all audiences.
+
+\subsection{SAF-02: Warn users of extended play sessions}
+\textbf{Description}: The game will warn users who have been playing for a
+long continuous period of time that they should take a break (\textquotedblleft{}It
+appears you\textquoteright{}ve been playing for a while, please take
+a break\textquotedblright{}). However, the game will never force users
+to exit. This will happen after two hours of continuous play.
+
+\subsection{SAF-03: Bugs should be easily patchable}
+\textbf{Description}: The application should be written in a clear, concise
+manner and thoroughly abstracted and DRYed (Don\textquoteright{}t
+Repeat Yourself) out so that writing patches for bugs is simple and
+easy. A single code-base ensures that one patch will fix the bug for
+every platform
+
+\subsection{SAF-04: Game should keep track of in-game purchases}
+\textbf{Description}: Local and remote purchase tracking required. This data
+will be automatically synced if needed (e.g. The user plays a game
+on a different platform than the one they made purchases on). 
+
+\subsection{SAF-05: Confirm transaction details}
+\textbf{Description}: Before processing transaction, ask customer to confirm
+the transaction details. A small popup will be displayed on the current
+page with the item the user is purchasing as well as the price they
+are agreeing to pay.
+
+\subsection{SAF-06: Game will include a fail-soft database}
+\textbf{Description}: Keep database information minimal so that the game does
+not have to connect to the database very often. There will also be
+a second database that will be synced up regularly with the original
+in case of a failure.
+
+\subsection{SAF-07: Backup database regularly}
+\textbf{Description}: The database will be backed up every 15 minutes to minimize
+lost customer purchases.
+
+\section{Security}
+
+\subsection{SEC-01: Game will use Facebook authentication}
+\textbf{Description}: Facebook OAuth will be used for authentication. This
+allows the user to log in to their Facebook account securely. The
+game will need to use OAuth correctly for the game to be secure. Facebook
+provides information on correct implementation.
+
+\subsection{SEC-02: Game will use Facebook payment system}
+\textbf{Description}: Facebook\textquoteright{}s API for secure payment transactions
+will be used, as requested by the client. This is the only method
+of payment accepted. The game will need to use the Facebook payment
+system correctly for the game to be secure. Facebook provides information
+on correct implementation. Transactions will not be lost, as specified
+in ROB-02.
+
+\subsection{SEC-03: Data will be stored on a secure database server}
+\textbf{Description}: User purchase history and scores will be stored on the
+server. The database will only be accessed by the game server, not
+the game clients. This allows for only the game server to hold the
+credentials to the database. 
+
+\subsection{SEC-04: Data storage for both client and server}
+\textbf{Description}: Server-side data will be used as temporary storage until
+the secure database is updated with the user\textquoteright{}s progress.
+It will push the changes to the database when the user logs out of
+Facebook or a connection is lost. Client-side data will be for the
+user to play in offline mode if he/she does not want to utilize these
+features or if they does not currently have an active internet connection.
+
+\subsection{SEC-05: Data will be sanitized}
+\textbf{Description}: Data sanitization will protect against attacks by malicious
+users. For all input boxes, the use of HTML tags, JavaScript or any
+other possible code that could jeopardize the security of the game

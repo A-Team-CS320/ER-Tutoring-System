@@ -78,7 +78,7 @@ Proof of Registration & Send Payment Due & Billing Info & Class Roster\\ \hline
 \begin{section}{Context Level Diagram}
     \begin{figure}[h!]
         \begin{center}
-           \centerline{ \includegraphics[height=13cm]{DF.jpg}}
+      %     \centerline{ \includegraphics[height=13cm]{DF.jpg}}
             \caption{DFD Context Diagram}
         \end{center}
     \end{figure}

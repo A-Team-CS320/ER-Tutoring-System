@@ -1,0 +1,219 @@
+\chapter{Functional Requirements}
+\section{Gameplay}
+\subsection{FUN-01: Player starts the game from the top of the screen}
+\textbf{Description}: The player should begin at the ceiling and accelerate
+downward, leaving a few seconds to draw the first platform and begin
+playing.
+
+\subsection{FUN-02: The user draws lines to bounce their character upward}
+\textbf{Description}: The player must draw line segments to bounce
+off of. This is done by swiping your finger on the touch screen or
+clicking and dragging with the mouse.
+
+\subsection{FUN-03: The user loses when the avatar falls off the screen or runs
+into a hazard}
+\textbf{Description}: The player loses by falling off the bottom of
+the screen or running into an enemy.
+
+\subsection{FUN-04: Screen moves upward in height during gameplay}
+\textbf{Description}: The screen will only scroll up when the avatar
+is moving vertically upward. The avatar will not pass the top of the
+screen before the screen is readjusted.
+
+\subsection{FUN-05: The avatar will bounce back down off of the bottom of platforms}
+\textbf{Description}: If the user collides with a platform through
+the bottom, it will pass through without any change in velocity.
+
+\subsection{FUN-06: Side walls are solid}
+\textbf{Description}: The avatar can bounce off of the wall to avoid enemies and other hazards.
+
+\subsection{FUN-07: The user has a limited length of line they can draw}
+\textbf{Description}: When the player has drawn platforms of combined
+length equal to the width of the screen and continues to draw, their previous
+drawings are steadily erased. To visualize this, imagine the movements
+of the snake in the classic game \textquoteleft{}Snake.\textquoteright{}
+
+\subsection{FUN-08: Power-ups will be activated immediately upon acquisition }
+\textbf{Description}: Power-ups will be activated as soon as soon
+as the avatar acquires them.
+
+\subsection{FUN-09: The user can pause during gameplay}
+\textbf{Description}: At any point during gameplay the user can hit
+the pause button allowing them bring up a separate screen menu to
+suspend play. This menu does not allow the user to see the gameplay
+in order to strategize. The pause menu allows the user to quit the
+game, go to the store (loses progress), restart the current game,
+and to be able to resume the game. There will be a one-second countdown
+when they click resume until the game begins again.
+
+\subsection{FUN-10: Screen never moves downwards}
+\textbf{Description}: The screen will only move upwards as the player
+jumps and will never move downward to follow the player\textquoteright{}s
+fall.
+
+\subsection{FUN-11: The activated power-ups will be displayed on the screen}
+\textbf{Description}: A list of the power-ups that are currently activated
+(in the form of a row of icons), will be displayed at the top of the
+screen during gameplay. These power-ups will be passive only and not
+be clickable.
+
+\subsection{FUN-12: Smaller platforms cause the player to bounce higher}
+\textbf{Description}: The length of the platform will determine how
+much upward acceleration the player gains from bouncing, with shorter
+length equaling more bounce.
+
+\subsection{FUN-13: A power-up will be collected when the avatar comes into 
+contact with it}
+\textbf{Description}: The avatar can pass completely through or just
+graze the power-up to acquire it. Any form of contact between the
+two sprites will count as a hit.
+
+\subsection{FUN-14: Users receive experience points and coins after each playthrough}
+\textbf{Description}: At the end of the game, the user receives experience
+points proportional to the height reached and number of enemies slain.
+
+\subsection{FUN-15: The user has a level, determined by total experience points}
+\textbf{Description}: Levels are determined by total experience points.
+Gaining levels allows the user to purchase new items in the store.
+
+\subsection{FUN-16: Enemy generation occurs randomly}
+\textbf{Description}: An arbitrary number of enemies are generated
+during gameplay every few seconds. The number of enemies is random,
+but within a certain range that is actively changing during play. 
+
+\subsection{FUN-17: Difficulty of game increases with height and level}
+\textbf{Description}: The range described in FUN-16 is based on the
+user\textquoteright{}s level as well as the current height at the
+time of generation. As the player gets to higher levels (overall)
+and heights (in a playthrough), both the maximum and the minimum of
+the range will increase.
+
+\subsection{FUN-18: The user\textquoteright{}s current score will be displayed
+on the screen}
+\textbf{Description}: During gameplay, the user\textquoteright{}s
+current score will be displayed on the screen and updated in real
+time to reflect the current playthrough. The user will initially have
+a score of zero at the beginning of the game. This score will never
+decrease. As the avatar rises and their height increases, the score
+in the corner will change. 
+
+\subsection{FUN-19: A drawn line will \textquotedblleft{}materialize\textquotedblright{}
+upon completion}
+\textbf{Description}: A line will only become solid, and allow the
+avatar to bounce, when the user lifts his finger, and the second endpoint
+of the line has been established.
+
+\subsection{FUN-20: Lines drawn through an avatar will do nothing}
+\textbf{Description}: Regardless of whether or not the user has completed
+the line, the avatar will always pass through the line, if the user
+has drawn the line through the avatar.
+
+\section{Menu}
+
+\subsection{FUN-21 Game Over menu will feature several courses of action}
+\textbf{Description}: This menu will offer the player a chance to
+start a new game, post a score to the Social page, go to the Store,
+go to the leaderboards or return to the Main Menu.
+
+\subsection{FUN-22 The Main Menu should feature many options}
+\textbf{Description}: The menu should allow the user the choice to
+begin a new game, check the leaderboards, access the in-game store,
+invite friends through facebook, or adjust settings.
+
+\subsection{FUN-23 The Online Store will feature many purchasable items}
+\textbf{Description}: Users will be able to generate as well as buy
+in-game currency and other items such as power-ups, new skins/stages,
+new music, etc. This will represented by a list of categories that
+users click on in order to purchase the item in that category. Each
+item will have their price written next to them.
+
+\subsection{FUN-24 The Settings menu should allow users to change options}
+\textbf{Description}: The user should be able to log in and out of
+Facebook, sync his/her data, change whether or not they get in-game
+notifications, and reset their local history.
+
+\subsection{FUN-25 The start screen will give the option of connecting to Facebook}
+\textbf{Description}: There will be a button that links to the Facebook
+login screen{[}c{]} so that the user can sign into the game. The user
+can also press a \textquotedblleft{}Play Offline\textquotedblright{}
+button to play the game without connecting to Facebook.
+
+\subsection{FUN-26 The preplay screen which will allow the user to select items}
+\textbf{Description}: On the preplay screen the user\textquoteright{}s
+avatar will be displayed along with his/her stats. A list of the items
+the user has already purchased (including power-ups, skins, etc.)
+will be visible, and each item will have a corresponding check box
+to allow the user to select it for their next playthrough.
+
+\section{Settings}
+
+\subsection{FUN-27 Facebook authentication will be required for purchases}
+\textbf{Description}: The user can view the store\textquoteright{}s
+contents without logging, in, however he/she will need to authenticate
+via Facebook before being able to purchase any item. The user will
+be able to buy coins through the Facebook store interface.
+
+\subsection{FUN-28 Users can reset their in-game progress}
+\textbf{Description}: Users can reset their progress, statistics and
+achievements on both their facebook account and on their offline/local
+account. This distinction will be made clear in the settings menu
+so that users don\textquoteright{}t accidentally reset the wrong account.
+
+\subsection{FUN-29 Resetting progress should be simple with user confirmation}
+\textbf{Description}: The reset function should be simple and easy
+and have user confirmation to prevent accidental reset.
+
+\subsection{FUN-30 The user can logout of Facebook from the settings menu}
+\textbf{Description}: The user can logout of Facebook and will be
+able to continue to play in offline mode. A confirmation dialog will
+pop up asking the user to verify that they wish to log out. The confirmation
+dialog will also notify the user that their progress will be synced
+to Facebook the next time they log in.
+
+\subsection{FUN-31 Backgrounding the application mid-playthrough will pause
+the game}
+\textbf{Description}: Backgrounding the application (via a home button
+press, for example) will pause the game. The state of the game will
+be saved so that when the user returns he/she will be brought to the
+pause menu and can resume play.
+
+\subsection{FUN-32 Exiting the application mid-playthrough will end the playthrough}
+\textbf{Description}: Exiting the application (e.g. closing the browser
+window or quitting the application entirely) will completely lose
+all of the current playthrough\textquoteright{}s progress
+
+\section{Social}
+
+\subsection{FUN-33 The user will be able to post a score to Facebook}
+\textbf{Description}: The user will be able to post a score to Facebook
+with a short message attached. This should be done without loading
+the social page.
+
+\subsection{FUN-34 The user must be able to access and post any previous scores}
+\textbf{Description}: This can be done from a tab on the Social Features
+page. The posts go to their Facebook wall.
+
+\subsection{FUN-35 The user will receive coins for inviting friends to play}
+\textbf{Description}: An sent invite will earn the user a few coins,
+an accepted invitation will earn a much larger sum. 
+
+\subsection{FUN-36 Users will be able to send power-ups to friends}
+\textbf{Description}: Next to each name on the leaderboard, there
+will be an arrow icon. Tapping it will pop-up a confirmation page
+to send a power-up to that friend. After sending a power-up there
+will be a cooldown period during which the user will be unable to
+send power-ups to the same friend.
+
+\subsection{FUN-37 The user will be alerted when they score higher than their
+friends}
+\textbf{Description}: After a playthrough, a popup screen (before
+the game over screen) will notify the user if he/she scored higher
+than a friend\textquoteright{}s personal best during that playthrough.
+
+\subsection{FUN-38 The user will receive notifications about friends\textquoteright{}
+activities}
+\textbf{Description}: The user will only receive notifications about
+activities involving the user directly. For example, the user will
+receive a notification if a friend gifts them a power-up, or if the
+friend surpasses their high score.
+
