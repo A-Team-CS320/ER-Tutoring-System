@@ -87,7 +87,7 @@ Proof of Registration & Send Payment Due & Billing Info & Class Roster\\ \hline
 \begin{section}{Level 0 Diagram}
     \begin{figure}[h!]
         \begin{center}
-            \centerline{\includegraphics[height=13cm]{DFD.jpg}}
+            \centerline{\includegraphics[height=13cm]{DFD Level0.jpg}}
             \caption{DFD Level 0 Diagram}
         \end{center}
     \end{figure}
@@ -166,16 +166,17 @@ Proof of Registration & Send Payment Due & Billing Info & Class Roster\\ \hline
     \end{enumerate}
     \end{subsection}
     
-    \begin{subsection}{Question Browsing}
+    \begin{subsection}{Select Question to Answer}
     Primary Actor: Student \newline
-    Precondition: Student is logged in and is in a quiz         \newline
+    Precondition: Student is logged in and is in an assignment         \newline
     Trigger: The student attempts to select a new question      to attempt to answer \newline
     Success End Condition: Question that the student selects     successfully loads \newline
     Failed End Condition: The question that is selected does     not load \newline
     \newline
     Steps:
     \begin{enumerate}
-    \item{Student selects the question they would like to        answer from a list on the top of the page.}
+    \item{Student scrolls through the list of questions in the assignment.}
+    \item{Student selects the question they would like to        answer from the list.}
     \item{Webpage for the selected question loads}
     \item{Student can read and answer question}
     \end{enumerate}
