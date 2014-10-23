@@ -1,4 +1,4 @@
-TARGET=main
+TARGET=srs
 FIG=
 INCLUDES=*.tex
 PDFFIG=figs/*.pdf
