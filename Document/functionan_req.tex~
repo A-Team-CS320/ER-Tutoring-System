@@ -1,0 +1,92 @@
+\chapter{Functional Requirements}
+\begin{section}{Functional Requirements}
+\fi
+    \begin{subsection}{Allow Student to Draw a Diagram}
+    Primary Actor: Student \newline
+    Precondition: Student is logged in and viewing a            question \newline
+    Trigger: Student chooses a question to work on \newline
+    Success end condition: Student can submit answer            \newline
+    Failed end condition: Diagram is not drawn \newline
+    \newline
+    Steps:
+    \begin{enumerate}
+    \item{Empty space available to draw diagram}
+    \item{Student picks a diagram type (Chen’s/Crow’s Foot)}
+    \item{Student picks shapes from toolbox and places in           diagram}
+    \item{Student places text inside shapes}
+    \item{Student places links between shapes}
+    \item{Student can edit or remove anything already placed on the diagram before finalizing}
+    \end{enumerate}
+    Exceptions:
+    \begin{enumerate}
+    \item{Teacher draws diagram that students must edit             \newline
+        *Draw space will not be empty, student will be able to           make changes to present diagram}
+    \end{enumerate}
+    \end{subsection}
+    
+    \begin{subsection}{Submit Answer}
+    Primary Actor:Student \newline
+    Precondition: Student is ready to submit answer \newline
+    Trigger: Pressing the submit button \newline
+    Success end condition: Feedback and/or grade is given       \newline
+    Failed end condition: Nothing is given back to student      \newline
+    \newline
+    Steps:
+    \begin{enumerate}
+    \item{Student submits answer by pressing the submit             button}
+    \item{System processes answer and decides validity}
+    \item{Outputs feedback and/or grade for student to see}
+    \item{Answer is saved into database}
+    \end{enumerate}
+    Exceptions:
+    \begin{enumerate}
+    \item{Student leaves area blank \newline
+	*Answer is just marked as wrong}
+	\addtocounter{enumi}{1}
+    \item{Teacher never properly input the correct answer or     feedback \newline
+	*Student is told that there's nothing to report}
+    \end{enumerate}
+    \end{subsection}
+    
+    \begin{subsection}{Allow Teacher to Create    Questions/Feedback}
+    
+    Primary Actor: Teacher \newline
+    Precondition: Teacher is logged in a specific course. \newline
+    Trigger: Teacher selects a specific Homework to create a     question. \newline
+    Success end condition: Question is uploaded and the instructor is able to see it. \newline
+    Failed end condition: Students don’t see the question       properly. \newline
+    \newline
+    Steps:
+    \begin{enumerate}
+    \item{Teacher clicks on a “create” button to create the           question.}
+    \item{Teacher select the number of the question that             he/she wants to post for a previously chosen               homework.}
+    \item{Teacher writes the database schema of the ER              diagram that is going to be drawn by the student, in         an available textbox.}
+    \item{Teacher provides a general feedback in a textbox            provided.}
+    \item{Teacher clicks on a “add” button to add the                 question of the homework.}
+    \item{Teacher clicks on a “preview” button to see the           students point of view of the entire homework.}
+    \item{Teacher clicks on a “submit” button to submit the           entire homework.}
+    \end{enumerate}
+    Exceptions:
+    \begin{enumerate}
+    \item{Teacher tries to create question but he/she doesn't have Internet connection.}
+    \end{enumerate}
+    \end{subsection}
+    
+    \begin{subsection}{Select Question to Answer}
+    Primary Actor: Student \newline
+    Precondition: Student is logged in and is in an assignment         \newline
+    Trigger: The student attempts to select a new question      to attempt to answer \newline
+    Success End Condition: Question that the student selects     successfully loads \newline
+    Failed End Condition: The question that is selected does     not load \newline
+    \newline
+    Steps:
+    \begin{enumerate}
+    \item{Student scrolls through the list of questions in the assignment.}
+    \item{Student selects the question they would like to        answer from the list.}
+    \item{Webpage for the selected question loads}
+    \item{Student can read and answer question}
+    \end{enumerate}
+    Exceptions: None
+    \end{subsection}
+
+\end{section}

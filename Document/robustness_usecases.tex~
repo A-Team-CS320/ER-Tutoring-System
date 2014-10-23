@@ -1,5 +1,5 @@
-\section{Robustness Use Cases}
-    \begin{subsection}{Student Enters Diagram}
+\chapter{Robustness Use Cases}
+    \begin{section}{Student Enters Diagram}
      
     Description: The student submits a diagram in either Chen or CF that is correct but is not the same as the instructor’s.\\
     Primary Actors: Student, System\\
@@ -18,9 +18,9 @@
             \item The system cannot process the student’s submitted diagram so that it can be compared to the professor’s uploaded answer.
             \item The system cannot send the student a response that says if his/her diagram was correct or incorrect.
             \end{itemize}
-    \end{subsection}
+    \end{section}
     
-    \begin{subsection}{Student Enters Variant of Incorrect Diagram}
+    \begin{section}{Student Enters Variant of Incorrect Diagram}
     Description: The student submits a diagram in either Chen or CF that is incorrect.\\
     Primary Actors: Student, System
     Secondary Actor: Professor\\
@@ -39,8 +39,8 @@
             \item The system cannot process the student’s submitted diagram so that it can be compared to the professor’s uploaded answer.
             \item The system cannot send the student a response that says if his/her diagram was correct or incorrect.
         \end{itemize}
-    \end{subsection}
-    \begin{subsection}{Professor or Content}
+    \end{section}
+    \begin{section}{Professor or Content}
         Author enters unspecified answer format\\
         Description: The professor or content author enters an answer into the system without specifying a format.\\
         Primary Actor: Professor (or Content Author)\\
@@ -54,12 +54,12 @@
                 \begin{itemize}
                     \item The system sends a prompt to the professor specifying that the answer was not recorded in the system and that he/she must submit an answer format.
                 \end{itemize}
-    \end{subsection}
-    \begin{subsection}{System Should Never Crash}
+    \end{section}
+    \begin{section}{System Should Never Crash}
     
     Description: Nothing the student does should crash the browser. The system may not respond or react correctly, but it will not crash the students browser or machine.
-    \end{subsection}
-    \begin{subsection}{ UI Should React Correctly To Student and Professor Actions}
+    \end{section}
+    \begin{section}{ UI Should React Correctly To Student and Professor Actions}
     
     Description: The UI should correctly react to what the student and professor’s actions command.\\
     Primary Actor: Student, Professor\\
@@ -77,7 +77,6 @@
         \begin{itemize}
             \item A specific student or professor action was not accounted for when the UI was created - the UI does not have the ability to make a response to that action.
         \end{itemize}
-    \end{subsection}
+    \end{section}
     
-
 

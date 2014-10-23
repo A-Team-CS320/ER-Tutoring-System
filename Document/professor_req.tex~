@@ -1,6 +1,6 @@
-\section{Professor UI Requirements}
+\chapter{Professor UI Requirements}
 
-\begin{subsection}{Professor Clicks on Side or Top Navigation Buttons}
+\begin{section}{Professor Clicks on Side or Top Navigation Buttons}
 Description: While on any page containing navigation links in the side or top bars, the professor clicks on a nav link \newline
 Primary Actors: Professor \newline
 Steps:
@@ -16,9 +16,9 @@ Exceptional Condition:
 \begin{itemize}
 \item{The professor is already on the page of the link they are clicking - nothing happens and the page does not change.}
 \end{itemize}
-\end{subsection}
+\end{section}
 
-\begin{subsection}{Professor Clicks on the Assignment Submission Ticker}
+\begin{section}{Professor Clicks on the Assignment Submission Ticker}
 
 Description: From the main landing page the professor clicks on the assignment submission ticker \newline 
 Primary Actor: Professor \newline
@@ -35,9 +35,9 @@ Exceptional Post Condition:
 \begin{itemize}
 \item{The professor has no submissions in his feed - he is directed to the log but is not shown any information}
 \end{itemize}
-\end{subsection}
+\end{section}
 
-\begin{subsection}{Professor Clicks on the Class or Student Ticker}
+\begin{section}{Professor Clicks on the Class or Student Ticker}
 Description: From the main landing page the professor clicks on enrolled student/ class ticker pane \newline
 Primary Actor: Professor \newline
 Steps:
@@ -49,9 +49,9 @@ Successful Post Condition:
 \begin{itemize}
 \item The professor is redirected to a larger detailed view with the option to sort by class or student name to display stats pertaining to course enrollment and individual student assignment histories
 \end{itemize}
-\end{subsection}
+\end{section}
 
-\begin{subsection}{Professor Clicks to Expand the Assignment Creation Sandbox}
+\begin{section}{Professor Clicks to Expand the Assignment Creation Sandbox}
 Primary Actor: Professor \newline
 Steps:
 \begin{enumerate}
@@ -62,13 +62,13 @@ Successful Post Condition:
 \begin{itemize}
 \item{The professor is taken to the assignment creation page and any potential diagrams or questions created in the sandbox are stored and transferred to the assignment creation window}
 \end{itemize}
-\end{subsection}
+\end{section}
 
 \newpage
 
 \begin{subsection}{Professor View}
 \begin{figure}[h!]
-    %    \centerline{\includegraphics[width=17cm]{ProfessorView.jpg}}
+        \centerline{\includegraphics[width=17cm]{ProfessorView.jpg}}
         \caption{Professor's User Interface}
 \end{figure}
 \end{subsection}
@@ -76,25 +76,24 @@ Successful Post Condition:
 
 \begin{subsection}{Create}
 \begin{figure}[h!]
-     %   \centerline{\includegraphics[width=17cm]{UICreate.jpg}}
+        \centerline{\includegraphics[width=17cm]{UICreate.jpg}}
         \caption{User Interface to create question}
 \end{figure}
 \end{subsection}
 \newpage
 \begin{subsection}{Login}
 \begin{figure}[h!]
-      %  \centerline{\includegraphics[width=17cm]{UILogin.jpg}}
+        \centerline{\includegraphics[width=17cm]{UILogin.jpg}}
         \caption{Login User Interface}
 \end{figure}
 \end{subsection}
 \newpage
 \begin{subsection}{Student}
 \begin{figure}[h!]
-       % \centerline{\includegraphics[width=17cm]{uistudent.jpg}}
+        \centerline{\includegraphics[width=17cm]{uistudent.jpg}}
         \caption{User Interface for the student}
 \end{figure}
 \end{subsection}
 
 
-
-
+\end{section}

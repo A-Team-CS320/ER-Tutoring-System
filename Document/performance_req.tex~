@@ -1,12 +1,11 @@
-\section{Performance Rquirements}
+\chapter{Performance Rquirements}
 
-    \begin{subsection}{Correctness Analysis}
+    \begin{section}{Correctness Analysis}
     The ER diagram drawn by the student generates a database schema that will be compared with schema provided by the professor in the question. If they are equal, then the solution provided by the student is correct, otherwise is wrong. This should be done in a matter of seconds.
-    \end{subsection}
+    \end{section}
     
-    \begin{subsection}{Question Loading}
+    \begin{section}{Question Loading}
     When the student selects a new question to attempt to answer the question should load within 5 seconds when the server is not busy and should load within 10 seconds when the server is busy.
-    \end{subsection}
+    \end{section}
     
-
 
