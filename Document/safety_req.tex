@@ -1,7 +1,7 @@
 
-\section{Safety/Security Requirements}
+\chapter{Safety/Security Requirements}
 
-    \begin{subsection}{Student Navigates to the Main Page}
+    \begin{section}{Student Navigates to the Main Page}
         Description: The student reaches the main page of an assignment. \newline
         Primary Actor: Student \newline
         Secondary Actor: Content author \newline
@@ -22,9 +22,9 @@
             \item {The student attempts to access a page he/she should not have access to - the student is displayed an appropriate warning message and is not given access to any assignment or interface that he/she is not meant to have access to.}
         \end{itemize}
     
-    \end{subsection}
+    \end{section}
 
-    \begin{subsection}{Professor Navigates to the Main Page}
+    \begin{section}{Professor Navigates to the Main Page}
            Description: The professor reaches the main page of an assignment. \newline
         Primary Actor: Professor \newline
         Secondary Actor: Content author \newline
@@ -45,9 +45,9 @@
             \begin{itemize}
         \item{The professor attempts to access a page he/she should not have access to - the professor is displayed an appropriate warning message and is not given access to any assignment or interface he/she is not meant to have access to.}
         \end{itemize}
-    \end{subsection}
+    \end{section}
 
-    \begin{subsection}{Student Closes Application With Unsaved Answers in the Window}
+    \begin{section}{Student Closes Application With Unsaved Answers in the Window}
     Description: The student has entered a response to a question without saving or submitting the assignment. \newline
     Primary Actor: Student \newline
     Secondary Actor: Professor \newline
@@ -61,9 +61,9 @@
     \begin{itemize}
         \item{The student is shown a prompt asking if he/she is sure about wanting to leave the page with unsaved responses.}
     \end{itemize}
-    \end{subsection}
+    \end{section}
 
-\begin{subsection}{Student Submits Page with Blank Answers}
+\begin{section}{Student Submits Page with Blank Answers}
 Description: The student submits an assignment with a response that was left blank. \newline
 Primary Actor: Student \newline
 Secondary Actor: Professor \newline
@@ -78,9 +78,9 @@ Successful Post Condition:
 \item{The student is presented with a prompt asking he/she is sure about wanting to submit a blank response to a question.}
 \end{itemize}
 
-\end{subsection}
+\end{section}
 
-    \begin{subsection}{Student Submits Assignment That Was Already Submitted}
+    \begin{section}{Student Submits Assignment That Was Already Submitted}
     Description: After a student submits an assignment, he/she tries to submit the same assignment again. \newline
     Primary Actor: Student \newline
     Secondary Actor: Professor \newline
@@ -98,9 +98,9 @@ Successful Post Condition:
     \begin{itemize}
         \item{If the submission comes after the assignment is closed, the student is informed that the assignment is closed and no subsequent submissions are allowed.} 
     \end{itemize}
-    \end{subsection}
-
-    \begin{subsection}{Student or Professor Tries to Log Into Someone Else’s Account}
+    \end{section}
+    
+    \begin{section}{Student or Professor Tries to Log Into Someone Else’s Account}
     Description: The student or professor tries to log into the  system with the NetID of another student or professor. \newline
     Primary Actors: Student, Professor \newline
     Secondary Actor: System \newline
@@ -116,7 +116,7 @@ Successful Post Condition:
         \item{The system sends a reply that says that the login was unsuccessful.}
         \item{The system prompts the user to try entering a username and password again.}
     \end{itemize}
-    \end{subsection}
+    \end{section}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
