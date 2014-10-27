@@ -5,16 +5,13 @@
         Description: The student answers a question by submitting the correct diagram. \newline
         Primary Actors: Student, System \newline
         Secondary Actor: Professor \newline
+        Successful Post Condition: The system marks the student’s answer to the question as correct. \newline
         Steps:
         \begin{enumerate}
             \item{The student enters a diagram as an answer to a question.}
             \item{The system compares that diagram to the correct diagram that was uploaded by the professor.}
             \item{The system recognizes that the diagram submitted matches the diagram that was uploaded by the professor.}
         \end{enumerate}
-        Successful Post Condition:
-        \begin{itemize}
-            \item{The system marks the student’s answer to the question as correct.} 
-        \end{itemize}
         Exceptional Conditions:
         \begin{itemize}
             \item{The student is unable to submit a diagram as an answer to a question.}
@@ -27,16 +24,13 @@
         Description: The student answers a question by submitting an incorrect diagram. \newline
         Primary Actors: Student, System \newline
         Secondary Actor: Professor \newline
+        Successful Post Condition: The system marks the student’s answer to the question as incorrect. \newline
         Steps:
         \begin{enumerate}
             \item{The student enters a diagram as an answer to a question.}
             \item{The system compares that diagram to the correct diagram that was uploaded by the professor.}
             \item{The system recognizes that the diagram submitted matches the diagram that was uploaded by the professor.}
         \end{enumerate}
-        Successful Post Condition:
-        \begin{itemize}
-            \item{The system marks the student’s answer to the question as incorrect.}
-        \end{itemize}
         Exceptional Conditions:
         \begin{itemize}
             \item{The student is unable to submit a diagram as an answer to a question.}
@@ -44,5 +38,52 @@
             \item{The system cannot send the student a response that says if his/her diagram was correct or incorrect.}
         \end{itemize}
     \end{section}
+    
+    \begin{section}{Student Submits Correct Answer Diagram}
+        Description: The student answers an assignment question by submitting the correct diagram. \newline
+        Primary Actor: Student \newline
+        Precondition: Student is logged into the system and has placed a diagram in a question answer box for an assignment \newline  
+        Trigger: Student submits the assignment \newline
+        Successful End Condition: The student’s question is marked “correct.” \newline
+        Failed End Condition: The student’s question is marked “incorrect.” \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The student answers an assignment question by putting a diagram in the answer box for that question.}
+            \item{The student submits the assignment.}
+            \item{The online tutoring system checks the student’s diagram against the author’s previously uploaded answer diagram.}
+            \item{The online tutoring system recognizes that the two diagrams are a match.}
+        \end{enumerate}
+        Exceptions:
+        \begin{itemize}
+            \item{The student is unable to submit a diagram as an answer to a question.  The student’s question is marked “incorrect.”}  
+            \item{The online tutoring system is unable process the student’s submitted diagram so that it can be 
+            compared to the author’s uploaded answer.  The student’s question is marked “incorrect.”}
+        \end{itemize}
+    \end{section}
+    
+    \begin{section}{Student Submits Incorrect Answer Diagram}
+        Description: The student answers an assignment question by submitting an incorrect diagram.
+        Primary Actor: Student
+        Precondition: Student is logged into the system and has placed a diagram in a question answer box for an assignment  
+        Trigger: Student submits the assignment
+        Successful End Condition: The student’s question is marked “incorrect.”
+        Failed End Condition: The student’s question is marked “correct.”
+        Steps:
+        \begin{enumerate}
+            \item{The student answers an assignment question by putting a diagram in the answer box for that question.}
+            \item{The student submits the assignment.}
+            \item{The online tutoring system checks the student’s diagram against the author’s previously uploaded answer diagram.}
+            \item{The online tutoring system recognizes that the two diagrams are not a match.} 
+        \end{enumerate}
+        Exceptions:
+        \begin{itemize}
+            \item{The student is unable to submit a diagram as an answer to a question.  The student’s question is marked “incorrect.”}  
+            \item{The online tutoring system is unable process the student’s submitted diagram so that it 
+            can be compared to the author’s uploaded answer.  The student’s question is marked “incorrect.”}
+        \end{itemize}
+    \end{section}
+
+
 
 
