@@ -1,6 +1,6 @@
     \chapter{Functional Requirements}
 %\section{Functional Requirements}
-    \section{Allow Student to Draw a Diagram}
+    \begin{section}{Allow Student to Draw a Diagram}
         Description: Student given tools and space to draw an ER diagram \newline
         Primary Actor: Student \newline
         Precondition: Student is logged in and viewing a            question \newline
@@ -18,13 +18,14 @@
             \item{Student can edit or remove anything already placed on the diagram before finalizing}
         \end{enumerate}
         Exceptions:
-        \begin{enumerate}
+        \begin{itemize}
             \item{Teacher draws diagram that students must edit             \newline
                 *Draw space will not be empty, student will be able to           make changes to present diagram}
-        \end{enumerate}
+        \end{itemize}
+    \end{section}
 
     
-    \section{Submit Answer}
+    \begin{section}{Submit Answer}
         Description: Student submits answer to be checked and saved by the system \newline
         Primary Actor:Student \newline
         Precondition: Student is ready to submit answer \newline
@@ -40,16 +41,16 @@
             \item{Answer is saved into database}
         \end{enumerate}
         Exceptions:
-        \begin{enumerate}
+        \begin{itemize}
             \item{Student leaves area blank \newline
         	*Answer is just marked as wrong}
-        	\addtocounter{enumi}{1}
             \item{Author never properly input the correct answer or     feedback \newline
         	*Student is told that there's nothing to report}
-        \end{enumerate}
+        \end{itemize}
+    \end{section}
 
     
-    \section{Allow Teacher to Create    Questions/Feedback}
+    \begin{section}{Allow Teacher to Create    Questions/Feedback}
         Description: Teacher creates a question and adds it to a specific assignment \newline
         Primary Actor: Teacher \newline
         Precondition: Teacher is logged in a specific course. \newline
@@ -68,12 +69,13 @@
             \item{Teacher clicks on a “submit” button to submit the           entire homework.}
         \end{enumerate}
         Exceptions:
-        \begin{enumerate}
+        \begin{itemize}
             \item{Teacher tries to create question but he/she doesn't have Internet connection.}
-        \end{enumerate}
+        \end{itemize}
+    \end{section}
 
     
-    \section{Select Question to Answer}
+    \begin{section}{Select Question to Answer}
         Description: Student views a question that he would like to answer \newline
         Primary Actor: Student \newline
         Precondition: Student is logged in and is in an assignment         \newline
@@ -89,8 +91,9 @@
             \item{Student can read and answer question}
         \end{enumerate}
         Exceptions: None
+    \end{section}
         
-    \section{Student Logs In}
+    \begin{section}{Student Logs In}
         Description: The student is logging in, in order to access the tutor system using their NetID and password. \newline
         Primary Actor: Student \newline
         Secondary Actor: System \newline
@@ -106,13 +109,14 @@
             \item{The student clicks on the LOGIN button to enter the system}
         \end{enumerate}
         Exceptions:
-        \begin{enumerate}
+        \begin{itemize}
             \item{If the student does not enter the correct NetID or password the system will 
             not log the student in and a message will appear stating that the NetID or password 
             that they entered is incorrect and to please try again.}
-        \end{enumerate}
+        \end{itemize}
+    \end{section}
         
-    \section{Student Views Assignments}
+    \begin{section}{Student Views Assignments}
         Description: Once logged in, the student can view available assignments \newline
         Primary Actor: Student \newline
         Precondition: Student is already logged in \newline
@@ -127,12 +131,13 @@
             \item{Student can go back to home page and select any other assignment}
         \end{enumerate}
         Exceptions:
-        \begin{enumerate}
+        \begin{itemize}
             \item{There are no assignments available, student has nothing to view.}
-        \end{enumerate}
+        \end{itemize}
+    \end{section}
     
     
-    \section{Student Views Question}
+    \begin{section}{Student Views Question}
         Description: The student views a question that is part of an assignment. \newline
         Primary Actor: Student \newline
         Secondary Actor: System \newline
@@ -146,15 +151,19 @@
             \item{The student selects an assignment to view.}
             \item{The student then selects a specific question to view.}
             \item{The student views the question.}
+        \end{enumerate}
         Exceptions: None
+    \end{section}
 
     
     
-    \section{Student Submits Answer to Question}
+    \begin{section}{Student Submits Answer to Question}
     
     
     
-    \section{Student Views Feedback}
+    \end{section
+    
+    \begin{section}{Student Views Feedback}
         Description: After submitting the question the student is able to see the feedback that is given for the 
         question based on if they answered the question correctly or not. \newline
         Primary Actor: Student \newline
@@ -175,12 +184,13 @@
             \item{The student reads the feedback that is displayed on the screen.}
         \end{enumerate}
         Exceptions:
-        \begin{enumerate}
+        \begin{itemize}
             \item{The author does not enter in any feedback for correct answers so no feedback will be displayed.}
             \item{The author does not enter in any feedback for incorrect answers so no feedback will be displayed.}
-        \end{enumerate}
+        \end{itemize}
+    \end{section}
         
-    \section{Author Logs In}
+    \begin{section}{Author Logs In}
         Description: The author is logging in, in order to access the tutor system using their NetID and password. \newline
         Primary Actor: Author \newline
         Secondary Actor: System \newline
@@ -196,22 +206,28 @@
             \item{The author clicks on the LOGIN button to enter the system}
         \end{enumerate}
         Exceptions:
-        \begin{enumerate}
+        \begin{itemize}
             \item{If the author does not enter the correct NetID or password 
             the system will not log the student in and a message will appear stating 
             that the NetID or password that they entered is incorrect and to please try again.}
-        \end{enumerate}
+        \end{itemize}
+    \end{section}
+  
+  
+    
+    \begin{section}{Author Views the Question Bank}
+    
+    \end{section}
     
     
-    \section{Author Views the Question Bank}
+    
+    \begin{section}{Author Adds a New Question to Question Bank}
+    
+    \end{section}
     
     
     
-    \section{Author Adds a New Question to Question Bank}
-    
-    
-    
-    \section{Author Edits a Question From the Question Bank}
+    \begin{section}{Author Edits a Question From the Question Bank}
         Description: The author wants to edit a question that is already in the question bank by changing any or all of the different parts of the question. \newline
         Primary Actor: Author \newline
         Secondary Actor: System \newline
@@ -229,20 +245,22 @@
             \item{The author saves the changes to the question and answer.}
         \end{enumerate}
         Exceptions:
-        \begin{enumerate}
+        \begin{itemize}
             \item{The author does not want to edit the question text so they do not edit it and leave it alone.}
             \item{The author does not want to edit the question correct answer so they do not edit it and leave it alone.}
             \item{The author does not want to edit the question feedback so they do not edit it and leave it alone.}
             \item{The author does not save the changes to the question so the changes are not saved.}
             \item{The author exits the system without saving the changes to the questions resulting in none of the changes being saved.}
-        \end{enumerate}
+        \end{itemize}
+    \end{section}
     
     
-    \section{Author Removes a Question From the Question Bank}
+    \begin{section}{Author Removes a Question From the Question Bank}
+    
+    \end{section}
     
     
-    
-    \section{Author Views a Question}
+    \begin{section}{Author Views a Question}
         Description: The author views questions that have been created. \newline
         Primary Actor: Author \newline
         Secondary Actor: System \newline
@@ -259,8 +277,11 @@
             \item{The author then views the question.}
         \end{enumerate}
         Exceptions: None
+    \end{section}
     
     
-    \section{Author Copies a Question} 
+    \begin{section}{Author Copies a Question} 
+    
+    \end{section}
 
 
