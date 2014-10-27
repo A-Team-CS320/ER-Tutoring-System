@@ -1,6 +1,7 @@
     \chapter{Functional Requirements}
 %\section{Functional Requirements}
     \section{Allow Student to Draw a Diagram}
+        Description: Student given tools and space to draw an ER diagram \newline
         Primary Actor: Student \newline
         Precondition: Student is logged in and viewing a            question \newline
         Trigger: Student chooses a question to work on \newline
@@ -24,6 +25,7 @@
 
     
     \section{Submit Answer}
+        Description: Student submits answer to be checked and saved by the system \newline
         Primary Actor:Student \newline
         Precondition: Student is ready to submit answer \newline
         Trigger: Pressing the submit button \newline
@@ -42,13 +44,14 @@
             \item{Student leaves area blank \newline
         	*Answer is just marked as wrong}
         	\addtocounter{enumi}{1}
-            \item{Teacher never properly input the correct answer or     feedback \newline
+            \item{Author never properly input the correct answer or     feedback \newline
         	*Student is told that there's nothing to report}
         \end{enumerate}
 
     
     \section{Allow Teacher to Create    Questions/Feedback}
-         Primary Actor: Teacher \newline
+        Description: Teacher creates a question and adds it to a specific assignment \newline
+        Primary Actor: Teacher \newline
         Precondition: Teacher is logged in a specific course. \newline
         Trigger: Teacher selects a specific Homework to create a     question. \newline
         Success end condition: Question is uploaded and the instructor is able to see it. \newline
@@ -71,6 +74,7 @@
 
     
     \section{Select Question to Answer}
+        Description: Student views a question that he would like to answer \newline
         Primary Actor: Student \newline
         Precondition: Student is logged in and is in an assignment         \newline
         Trigger: The student attempts to select a new question      to attempt to answer \newline
@@ -85,6 +89,178 @@
             \item{Student can read and answer question}
         \end{enumerate}
         Exceptions: None
+        
+    \section{Student Logs In}
+        Description: The student is logging in, in order to access the tutor system using their NetID and password. \newline
+        Primary Actor: Student \newline
+        Secondary Actor: System \newline
+        Precondition: The student is on the login page of the system. \newline
+        Trigger: The student wants to log into the tutoring system. \newline
+        Successful End Condition: The student successfully logs into the tutoring system. \newline
+        Failed End Condition:  The student is unable to log into the system because of an incorrect NetID or password or both \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The student enters their NetID in the username textbox}
+            \item{The student enters their password in the password textbox}
+            \item{The student clicks on the LOGIN button to enter the system}
+        \end{enumerate}
+        Exceptions:
+        \begin{enumerate}
+            \item{If the student does not enter the correct NetID or password the system will 
+            not log the student in and a message will appear stating that the NetID or password 
+            that they entered is incorrect and to please try again.}
+        \end{enumerate}
+        
+    \section{Student Views Assignments}
+        Description: Once logged in, the student can view available assignments \newline
+        Primary Actor: Student \newline
+        Precondition: Student is already logged in \newline
+        Trigger: Student logs in \newline
+        Successful End Condition: Student can view all questions in an assignment \newline
+        Failed End Condition: Student is unable to see any questions in the assignment \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{Student clicks on desired assignment}
+            \item{Student can select any of the question(s) in the assignment}
+            \item{Student can go back to home page and select any other assignment}
+        \end{enumerate}
+        Exceptions:
+        \begin{enumerate}
+            \item{There are no assignments available, student has nothing to view.}
+        \end{enumerate}
+    
+    
+    \section{Student Views Question}
+        Description: The student views a question that is part of an assignment. \newline
+        Primary Actor: Student \newline
+        Secondary Actor: System \newline
+        Precondition: The student is logged into the system. \newline
+        Trigger: The student clicks on the question to view it. \newline
+        Successful End Condition: The student views the question they have selected. \newline
+        Failed End Condition: The student is unable to view the question. \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The student selects an assignment to view.}
+            \item{The student then selects a specific question to view.}
+            \item{The student views the question.}
+        Exceptions: None
 
+    
+    
+    \section{Student Submits Answer to Question}
+    
+    
+    
+    \section{Student Views Feedback}
+        Description: After submitting the question the student is able to see the feedback that is given for the 
+        question based on if they answered the question correctly or not. \newline
+        Primary Actor: Student \newline
+        Secondary Actor: System \newline
+        Precondition: The student has selected a question and answered the question. \newline
+        Trigger: The student submits the answer to the question. \newline
+        Successful End Condition: Feedback is displayed on the screen for the student 
+        to read and use to help make their answer correct if it is incorrect. \newline
+        Failed End Condition: There is no feedback that gets displayed. \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{Once the answer has been submitted the system compares it to the correct answer given.}
+            \item{If the answer is correct the question page displays the feedback that is 
+            written by the author for a correct answer such as good job or correct.}
+            \item{If the answer is incorrect the question page displays the feedback that is 
+            written by the author for an incorrect answer such as a hint or common mistake.}
+            \item{The student reads the feedback that is displayed on the screen.}
+        \end{enumerate}
+        Exceptions:
+        \begin{enumerate}
+            \item{The author does not enter in any feedback for correct answers so no feedback will be displayed.}
+            \item{The author does not enter in any feedback for incorrect answers so no feedback will be displayed.}
+        \end{enumerate}
+        
+    \section{Author Logs In}
+        Description: The author is logging in, in order to access the tutor system using their NetID and password. \newline
+        Primary Actor: Author \newline
+        Secondary Actor: System \newline
+        Precondition: The author is on the login page of the system. \newline
+        Trigger: The author wants to log into the tutoring system. \newline
+        Successful End Condition: The author successfully logs into the tutoring system. \newline
+        Failed End Condition:  The author is unable to log into the system because of an incorrect NetID or password or both \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The author enters his NetID in the username textbox}
+            \item{The author enters his password in the password textbox}
+            \item{The author clicks on the LOGIN button to enter the system}
+        \end{enumerate}
+        Exceptions:
+        \begin{enumerate}
+            \item{If the author does not enter the correct NetID or password 
+            the system will not log the student in and a message will appear stating 
+            that the NetID or password that they entered is incorrect and to please try again.}
+        \end{enumerate}
+    
+    
+    \section{Author Views the Question Bank}
+    
+    
+    
+    \section{Author Adds a New Question to Question Bank}
+    
+    
+    
+    \section{Author Edits a Question From the Question Bank}
+        Description: The author wants to edit a question that is already in the question bank by changing any or all of the different parts of the question. \newline
+        Primary Actor: Author \newline
+        Secondary Actor: System \newline
+        Precondition: The author has already created the question that wish to edit. \newline
+        Trigger: The author is viewing a question that they wish to edit. \newline
+        Successful End Condition: The question changes have been made and the author is prompted that their changes have been made. \newline
+        Failed End Condition: The question does not get updated and the author is prompted saying that the question was not changed. \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The author selects the edit button.}
+            \item{The author edits the question text.}
+            \item{The author edits the question correct answer.}
+            \item{The author edits the question feedback.}
+            \item{The author saves the changes to the question and answer.}
+        \end{enumerate}
+        Exceptions:
+        \begin{enumerate}
+            \item{The author does not want to edit the question text so they do not edit it and leave it alone.}
+            \item{The author does not want to edit the question correct answer so they do not edit it and leave it alone.}
+            \item{The author does not want to edit the question feedback so they do not edit it and leave it alone.}
+            \item{The author does not save the changes to the question so the changes are not saved.}
+            \item{The author exits the system without saving the changes to the questions resulting in none of the changes being saved.}
+        \end{enumerate}
+    
+    
+    \section{Author Removes a Question From the Question Bank}
+    
+    
+    
+    \section{Author Views a Question}
+        Description: The author views questions that have been created. \newline
+        Primary Actor: Author \newline
+        Secondary Actor: System \newline
+        Precondition: The author is logged into the system. \newline
+        Trigger: The author has created a question and would like to view the question. \newline
+        Successful End Condition: The author views the question that they would like to view. \newline
+        Failed End Condition: The author is unable to view the question that they want to view. \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The author selects the questions tab from their view.}
+            \item{The author then scrolls through the list of questions.}
+            \item{The author then selects the question they would like to view.}
+            \item{The author then views the question.}
+        \end{enumerate}
+        Exceptions: None
+    
+    
+    \section{Author Copies a Question} 
 
 
