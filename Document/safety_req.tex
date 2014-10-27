@@ -10,22 +10,21 @@
             \item{The page loads, displaying the correct questions for the assignment selected.}
             \item{All questions load and display properly.}
             \item{The student response areas load and allow for proper student input.}
-            \end{enumerate}
-            Successful Post Conditions:
-            \begin{itemize}
+        \end{enumerate}
+        Successful Post Conditions:
+        \begin{itemize}
             \item{The page displayed is for the correct class and assignment.}
             \item{The student gains no access to non-student interfaces.}
             \item{The submission of answers writes only to the students record for the assignment.}
-            \end{itemize}
-            Exceptional Condition:
+        \end{itemize}
+        Exceptional Condition:
         \begin{itemize}
             \item {The student attempts to access a page he/she should not have access to - the student is displayed an appropriate warning message and is not given access to any assignment or interface that he/she is not meant to have access to.}
         \end{itemize}
-    
     \end{section}
 
     \begin{section}{Professor Navigates to the Main Page}
-           Description: The professor reaches the main page of an assignment. \newline
+        Description: The professor reaches the main page of an assignment. \newline
         Primary Actor: Professor \newline
         Secondary Actor: Content author \newline
         Steps:
@@ -42,81 +41,171 @@
             \item{The content changes that are made only apply to the currently selected assignment.}
         \end{itemize}
         Exceptional Condition:
-            \begin{itemize}
-        \item{The professor attempts to access a page he/she should not have access to - the professor is displayed an appropriate warning message and is not given access to any assignment or interface he/she is not meant to have access to.}
+        \begin{itemize}
+            \item{The professor attempts to access a page he/she should not have access to - the professor is displayed an appropriate warning message and is not given access to any assignment or interface he/she is not meant to have access to.}
         \end{itemize}
     \end{section}
 
     \begin{section}{Student Closes Application With Unsaved Answers in the Window}
-    Description: The student has entered a response to a question without saving or submitting the assignment. \newline
-    Primary Actor: Student \newline
-    Secondary Actor: Professor \newline
-    Steps:
-    \begin{enumerate}
-        \item{The student enters a full or partial response to an assignment question.}
-        \item{The student does not save or submit the assignment.}
-        \item{The student closes the assignment page.}
-    \end{enumerate}
-    Successful Post Condition:
-    \begin{itemize}
-        \item{The student is shown a prompt asking if he/she is sure about wanting to leave the page with unsaved responses.}
-    \end{itemize}
+        Description: The student has entered a response to a question without saving or submitting the assignment. \newline
+        Primary Actor: Student \newline
+        Secondary Actor: Professor \newline
+        Steps:
+        \begin{enumerate}
+            \item{The student enters a full or partial response to an assignment question.}
+            \item{The student does not save or submit the assignment.}
+            \item{The student closes the assignment page.}
+        \end{enumerate}
+        Successful Post Condition:
+        \begin{itemize}
+            \item{The student is shown a prompt asking if he/she is sure about wanting to leave the page with unsaved responses.}
+        \end{itemize}
     \end{section}
 
-\begin{section}{Student Submits Page with Blank Answers}
-Description: The student submits an assignment with a response that was left blank. \newline
-Primary Actor: Student \newline
-Secondary Actor: Professor \newline
-Steps:
-\begin{enumerate}
-\item{The student accesses the page.}
-\item{The student inputs and saves responses to some questions.}
-\item{The student submits the assignment with some responses that are left entirely blank.}
-\end{enumerate}
-Successful Post Condition:
-\begin{itemize}
-\item{The student is presented with a prompt asking he/she is sure about wanting to submit a blank response to a question.}
-\end{itemize}
-
-\end{section}
+    \begin{section}{Student Submits Page with Blank Answers}
+        Description: The student submits an assignment with a response that was left blank. \newline
+        Primary Actor: Student \newline
+        Secondary Actor: Professor \newline
+        Steps:
+        \begin{enumerate}
+            \item{The student accesses the page.}
+            \item{The student inputs and saves responses to some questions.}
+            \item{The student submits the assignment with some responses that are left entirely blank.}
+        \end{enumerate}
+        Successful Post Condition:
+        \begin{itemize}
+            \item{The student is presented with a prompt asking he/she is sure about wanting to submit a blank response to a question.}
+        \end{itemize}
+    \end{section}
 
     \begin{section}{Student Submits Assignment That Was Already Submitted}
-    Description: After a student submits an assignment, he/she tries to submit the same assignment again. \newline
-    Primary Actor: Student \newline
-    Secondary Actor: Professor \newline
-    Steps:
-    \begin{enumerate}
-        \item{The student completes an assignment.}
-        \item{The student completes the same assignment with different answers.}
-        \item{The student submits the assignment again.}
-    \end{enumerate}
-    Successful Post Condition:
-    \begin{itemize}
-        \item{The student is presented with a prompt asking if the/she wants to overwrite the submitted assignment - assuming this occurs before the assignment is closed.} 
-    \end{itemize}
-    Exceptional Condition:
-    \begin{itemize}
-        \item{If the submission comes after the assignment is closed, the student is informed that the assignment is closed and no subsequent submissions are allowed.} 
-    \end{itemize}
+        Description: After a student submits an assignment, he/she tries to submit the same assignment again. \newline
+        Primary Actor: Student \newline
+        Secondary Actor: Professor \newline
+        Steps:
+        \begin{enumerate}
+            \item{The student completes an assignment.}
+            \item{The student completes the same assignment with different answers.}
+            \item{The student submits the assignment again.}
+        \end{enumerate}
+        Successful Post Condition:
+        \begin{itemize}
+            \item{The student is presented with a prompt asking if the/she wants to overwrite the submitted assignment - assuming this occurs before the assignment is closed.} 
+        \end{itemize}
+        Exceptional Condition:
+        \begin{itemize}
+            \item{If the submission comes after the assignment is closed, the student is informed that the assignment is closed and no subsequent submissions are allowed.} 
+        \end{itemize}
     \end{section}
     
     \begin{section}{Student or Professor Tries to Log Into Someone Else’s Account}
-    Description: The student or professor tries to log into the  system with the NetID of another student or professor. \newline
-    Primary Actors: Student, Professor \newline
-    Secondary Actor: System \newline
-    Steps:
-    \begin{enumerate}
-        \item{The student or professor enters someone else’s NetID into the system.}
-        \item{The student or professor enters a fake password into the system.}
-        \item{The student or professor clicks the “Login” button or the enter key.}
-    \end{enumerate}
-    Successful Post Conditions:
-    \begin{itemize}
-        \item{The system prohibits the student or professor from logging into the system with a NetID and password that do not match.}
-        \item{The system sends a reply that says that the login was unsuccessful.}
-        \item{The system prompts the user to try entering a username and password again.}
-    \end{itemize}
+        Description: The student or professor tries to log into the  system with the NetID of another student or professor. \newline
+        Primary Actors: Student, Professor \newline
+        Secondary Actor: System \newline
+        Steps:
+        \begin{enumerate}
+            \item{The student or professor enters someone else’s NetID into the system.}
+            \item{The student or professor enters a fake password into the system.}
+            \item{The student or professor clicks the “Login” button or the enter key.}
+        \end{enumerate}
+        Successful Post Conditions:
+        \begin{itemize}
+            \item{The system prohibits the student or professor from logging into the system with a NetID and password that do not match.}
+            \item{The system sends a reply that says that the login was unsuccessful.}
+            \item{The system prompts the user to try entering a username and password again.}
+        \end{itemize}
     \end{section}
+    
+    \begin{section}{User (Student/Instructor/Author) Correctly Logs into the Online Tutor System}
+        Description: The user logs into the online tutor system by correctly entering his/her netID and password. \newline
+        Primary Actor: User \newline
+        Precondition: User navigates to the online tutor system’s login web page \newline
+        Trigger: User clicks the “Log In” button on the online tutor system’s login web page \newline
+        Successful End Condition: The user is successfully logged into his/her account and can see his/her respective homepage on the screen. \newline
+        Failed End Condition: The user is brought back to the login web page and is prompted to try logging in again. \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The user correctly enters his/her netID.}
+            \item{The user correctly enters his/her password.}
+            \item{The user clicks the “Log In” button.}
+        \end{enumerate}
+        Exception:
+        \begin{itemize}
+            \item{The online tutor system does not recognize that the user’s correctly entered netID and password are associated with that user’s existing account.
+            The user is brought back to the login web page and is prompted to try logging in again.}
+        \end{itemize}
+    \end{section}
+    
+    \begin{section}{User Incorrectly Logs into the Online Tutor System}
+        Description: The user logs into the online tutor system by entering an incorrect netID and/or password. \newline
+        Primary Actor: User \newline
+        Precondition: User navigates to the online tutor system’s login web page \newline
+        Trigger: User clicks the “Log In” button on the online tutor system’s login web page \newline
+        Successful End Condition: The user is brought back to the login web page and is prompted to try logging in again. \newline
+        Failed End Condition: The user is logged into another user’s account and can see that user’s respective homepage on the screen. \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The user enters an incorrect netID. \newline
+	              (and/or)}
+            \item{The user enters an incorrect password.}
+            \item{The user clicks the “Log In” button.}
+        \end{enumerate}
+        Exception: None
+    \end{section}
+    
+    \begin{section}{User Correctly Logs out of the Online Tutor System}
+        Description: The user is able to successfully log out of the online tutor system. \newline
+        Primary Actor: User \newline
+        Precondition: User is logged into his/her account \newline 
+        Trigger: User clicks the “Log Out” button on one of the online tutor system’s web pages \newline
+        Successful End Condition: The user’s screen shows a reply from the online tutor system that says that the log out was successful. \newline
+        Failed End Condition: The user’s screen displays the same page that it displayed before the user clicked the “Log Out” button. \newline
+        \newline
+        Step:
+        \begin{enumerate}
+            \item{The user clicks the “Log Out” button.}
+        \end{enumerate}
+        Exception:
+        \begin{itemize}
+            \item{The “Log Out” button does not have the functionality to successfully log the user out of his/her account.  The user’s screen displays the same page that it displayed before the user clicked the “Log Out” button.}
+        \end{itemize}
+    \end{section}
+    
+    \begin{section}{User Creates an Account on the Online Tutor System}
+        Description: The user is able to successfully create an account on the online tutor system. \newline
+        Primary Actor: User \newline
+        Precondition: User navigates to the online tutor system’s login web page \newline
+        Trigger: User clicks the “Create” button on the online tutor system’s create acount web page \newline
+        Successful End Condition: The user’s screen shows a reply from the system that says that his/her account was 
+        successfully created, and the user’s respective homepage is displayed on the screen. \newline
+        Failed End Condition: The user receives a reply from the online tutor system that says that the account could not be created. \newline
+         \newline
+        Steps:
+        \begin{enumerate}
+            \item{The user clicks the “Create Account” button on the online tutor system’s login web page.}
+            \item{The user correctly enters his/her netID.}
+            \item{The user correctly enters his/her password.}
+            \item{The user clicks the “Create” button.}
+        \end{enumerate}
+        Exception:
+        \begin{itemize}
+            \item{The user’s entered netID and/or password is not recognized by the online tutor system as pertaining to an existing student of the respective university or college. 
+            The user receives a reply from the online tutor system that says that the account could not be created.}
+        \end{itemize}
+    \begin{section}
+    
+    \begin{section}{User Has Unlimited Amount of Attempts to Log In}
+        Description: Each user is given a certain (preset) amount of failed login attempts 
+        in a given (preset) amount of time to log into the online tutoring system on a particular device.  
+        After a user has used up all of his/her failed login attempts on a particular device, 
+        that device will be prevented from logging into the system by that user or any other users 
+        until a certain (preset) amount of time has passed.  This method is act of security to prevent 
+        users from hacking into other users’ accounts.
+    \end{section}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
