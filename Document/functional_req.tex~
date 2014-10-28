@@ -11,7 +11,7 @@
         Steps:
         \begin{enumerate}
             \item{Empty space available to draw diagram}
-            \item{Student picks a diagram type (Chen’s/Crow’s Foot)}
+            \item{Student picks a diagram type (Chen's/Crow's Foot)}
             \item{Student picks shapes from toolbox and places in           diagram}
             \item{Student places text inside shapes}
             \item{Student places links between shapes}
@@ -57,7 +57,7 @@
         Precondition: Author is logged into the Online Tutor System. \newline
         Trigger: Author visits the page to create a question. \newline
         Success end condition: Question is created and instructors are able to see the question. \newline
-        Failed end condition: Instructors aren’t able to see the question. \newline
+        Failed end condition: Instructors aren't able to see the question. \newline
         \newline
         Steps:
         \begin{enumerate}
