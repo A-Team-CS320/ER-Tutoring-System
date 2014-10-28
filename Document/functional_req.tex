@@ -218,6 +218,24 @@
     
     \begin{section}{Author Views the Question Bank}
     
+Description: The author views the questions that have already been created and are in the question bank.\\
+Primary Actor: Author\\
+Secondary Actor: System \\
+Precondition: Author is logged in and there are questions in the question bank.\\
+Trigger: The author would like to view the question bank.\\
+Steps:
+\begin{enumerate}
+\item The author selects the questions tab.
+\item The author is now viewing the question bank.
+
+\end{enumerate}
+
+Successful End Condition: The author is able to view the question bank.\\
+Failed End Condition: The author is unable to view the question bank.\\
+Exceptions:
+\begin{itemize}
+\item There are no questions in the question bank to view. The author sees an empty question bank.
+\end{itemize}
     \end{section}
     
     
@@ -291,8 +309,6 @@
             \item{The author selects the questions tab to view the question bank.}
             \item{The author selects the specific question that they would like to remove.}
             \item{The author presses remove question.}
-            \item{}
-            \item{}
         \end{enumerate}
         Exceptions:
         \begin{itemize}
@@ -322,7 +338,32 @@
     
     
     \begin{section}{Author Copies a Question} 
-    
+  
+Description: The author takes an existing question and copies it creating a new question.\\
+Primary Actor: Author\\
+Secondary Actor: System\\
+Precondition: The author is logged in and there is a question to copy.\\
+Trigger: The author wants to copy a question.\\
+Steps:
+\begin{enumerate}
+\item The author selects the questions tab to view the question bank.
+\item They select the question which they would like to copy.
+\item They choose to copy the question.
+\item They make any necessary edits and then save the question.
+\item The question is successfully copied.
+
+
+\end{enumerate}
+Successful End Condition: The copies a previously made question and is able to create a new one.\\
+Failed End Condition: The author is unable to successfully copy a question.
+Exceptions: 
+\begin{itemize}
+\item There are no questions in the question bank to copy.
+\item They make no edits to the copied question and copy it as is.
+
+\end{itemize}
+
+
     \end{section}
 
 
