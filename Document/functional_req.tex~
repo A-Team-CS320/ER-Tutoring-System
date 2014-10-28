@@ -223,20 +223,41 @@
     
     
     \begin{section}{Author Adds a New Question to Question Bank}
-    
+      Description: Author adds a new question to the question bank. \newline
+        Primary Actor: Instructor.  \newline
+        Secondary Actor: System  \newline
+        Precondition: Author is logged into the Online Tutor System. \newline
+        Trigger: The author would like to add a new question to the question bank. \newline
+        Successful End Condition: A question is successfully added to the question Bank. \newline
+        Failed End Condition: The question is no added to the question bank.
+   \newline
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{Author goes to question bank section.}
+            \item{Author clicks on “Add” button to add a question.}
+            \item{Author input the question in a textbox.}
+		\item{Author provides the appropriate feedback to the question.}
+		\item{Author clicks on a “Submit” button.}
+        \end{enumerate}
+        Exceptions:
+        \begin{itemize}
+            \item{Author submits wrong feedback.}
+	    \item{Internet goes offline while author was writing the question and/or feedback.}
+        \end{itemize}
     \end{section}
     
     
     
     \begin{section}{Author Edits a Question From the Question Bank}
-        Description: The author wants to edit a question that is already in the question bank by changing any or all of the different parts of the question. \newline
-        Primary Actor: Author \newline
-        Secondary Actor: System \newline
-        Precondition: The author has already created the question that wish to edit. \newline
-        Trigger: The author is viewing a question that they wish to edit. \newline
-        Successful End Condition: The question changes have been made and the author is prompted that their changes have been made. \newline
-        Failed End Condition: The question does not get updated and the author is prompted saying that the question was not changed. \newline
-        \newline
+        Description: The author wants to edit a question that is already in the question bank by changing any or all of the different parts of the question. \\
+        Primary Actor: Author \\
+        Secondary Actor: System \\
+        Precondition: The author has already created the question that wish to edit. \\
+        Trigger: The author is viewing a question that they wish to edit. \\
+        Successful End Condition: The question changes have been made and the author is prompted that their changes have been made. \\
+        Failed End Condition: The question does not get updated and the author is prompted saying that the question was not changed. \\
+        \\
         Steps:
         \begin{enumerate}
             \item{The author selects the edit button.}
@@ -257,7 +278,26 @@
     
     
     \begin{section}{Author Removes a Question From the Question Bank}
-    
+    Description: The author views the questions that have already been created and are in the question bank. \\
+        Primary Actor: Author.  \\
+        Secondary Actor: System. \\
+        Precondition: Author is logged in and there are questions in the question bank.\\
+        Trigger: The author would like to remove a question from the question bank. \\
+        Successful End Condition:  The question is removed. \\
+        Failed End Condition: The question is unable to be removed.\\
+        \newline
+        Steps:
+        \begin{enumerate}
+            \item{The author selects the questions tab to view the question bank.}
+            \item{The author selects the specific question that they would like to remove.}
+            \item{The author presses remove question.}
+            \item{}
+            \item{}
+        \end{enumerate}
+        Exceptions:
+        \begin{itemize}
+            \item{The question bank is empty and therefore the author is unable to remove any questions.}
+        \end{itemize}
     \end{section}
     
     
