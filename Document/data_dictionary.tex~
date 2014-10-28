@@ -1,0 +1,53 @@
+\chapter{Data Dictionary}
+
+
+\begin{table}
+
+\scalebox{0.7}{
+    \begin{tabular}{ | l | l | l |l| p{5cm} |}
+  \hline
+    Student Info & Instructor Info & Author Info & Retrieve Question \\ \hline
+
+
+    - student ID	&  - instructor ID  &  - author ID          & - question ID  \\
+    - password		&  - password      	&  - password           & - question  \\ 
+					&              	  	&                       & - assignment ID\\ \hline
+
+    
+       
+    
+Submit Answer		  	& Send Student Score & Send Feedback 				& Display Class Info\\ \hline
+
+       - student ID   	&  - student ID    	 &  - question ID				& - class ID  \\ 
+       - question ID  	&  - instructor ID   &  - feedback information      & \\
+	   - student answer &  - student score   &               				&\\ \hline
+    
+    
+Display Feedback		  	& Class Info 		& Update Question 				& Create New Questions/Answers\\ \hline
+
+       - student ID   			&  - student ID   		 &  - question ID				& - question ID  \\ 
+       - student answer 		&  					  	 &  - question info			    & - question info\\
+	   - question ID 			&  					   	 &               				& - answer(s) info\\ \hline    
+    
+    
+Check Scores		  	& Check Answers 		& Update Scores 				& \\ \hline
+
+       - student ID 			&  - question ID   		 &  - student ID				&   \\ 
+       - question ID 			&  - student ID		  	 &  - question ID		   		&  \\
+								&  - student answer	  	 &  - student answer		    &  \\	   
+	    						&  - question answer  	 &               				&  \\ \hline       
+    
+    
+    
+    \hline
+   
+    \end{tabular}
+    }
+ \caption{Data Dictionary}
+\end{table}
+
+    
+
+    
+
+

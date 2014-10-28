@@ -1,83 +1,36 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+% book example for classicthesis.sty
+\documentclass[11pt,a5paper,footinclude=true,headinclude=true]{report} % KOMA-Script book
+\usepackage[T1]{fontenc}                
+\usepackage[linedheaders,parts,pdfspacing]{classicthesis} % ,manychapters
+%\usepackage[osf]{libertine}
+\usepackage{amsthm}
 \usepackage{graphicx}
-\usepackage{verbatim}
-\usepackage{rotating}
-\usepackage{color}
-\usepackage{a4}
-\title{320 Requirements}
-\author{Trevor's Team}
-\date{\today}
+\usepackage[T1]{fontenc}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
 
 \begin{document}
-\begin{titlepage}
 
-\maketitle
-\begin{abstract}
-\textbf{Purpose of System:} \newline
-\newline
-The purpose of this system is to be an online tutor for students at the University of Massachusetts Amherst. This learning tool would help teach the students and allow them to create ER diagrams and submit them as homework assignments. They can then be graded by solutions uploaded by the instructor of a course. Feedback will then be provided to help the student learn from their mistakes. The benefits of this system is that it makes submitting learning in the course and submitting homework much easier for both the students and instructor. \newline
-\textbf{Scope:}
-\newline \newline
-This document will clearly outline the requirements and the system requirements of ER Diagram Tutoring System. This document should cover all key concepts and fundamental requirements. The requirements should satisfy the standards of the client and provide accuracy in the functionality of the system. 
+\include{intro}  
+	\tableofcontents 
 
-
-\end{abstract}
-\end{titlepage}
-\tableofcontents
-\newpage
-
-
+\include{abstract}
+  
+  
+\part{Diagrams}    
 \include{data_dictionary}
-\newpage
+\include{diagrams}
 
-\iffalse
-\begin{section}{Context Level Diagram}
-    \begin{figure}[h!]
-        \begin{center}
-          \centerline{ \includegraphics[height=13cm]{Context Diagram.jpg}}
-            \caption{DFD Context Diagram}
-        \end{center}
-    \end{figure}
-\end{section}
-\newpage
-\begin{section}{Level 0 Diagram}
-    \begin{figure}[h!]
-        \begin{center}
-            \centerline{\includegraphics[height=13cm]{DFD Level 0.jpg}}
-            \caption{DFD Level 0 Diagram}
-        \end{center}
-    \end{figure}
-\end{section}
-\newpage
-\fi
-
-
+\part{Functional Requirements}
 \include{functional_req}
 \include{environmental_req}
 \include{performance_req}
 \include{safety_req}
-\include{robustness_usecases}
 \include{accuracy_req}
-\include{login_use}
 \include{professor_req}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\part{Use Cases}
+\include{robustness_usecases}
+\include{login_use}
 \end{document}
-

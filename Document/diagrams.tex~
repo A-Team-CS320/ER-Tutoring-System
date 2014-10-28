@@ -1,0 +1,18 @@
+\chapter{Context Level Diagram}
+
+    \begin{figure}
+
+          \centerline{ \includegraphics[height=7cm]{ContextDiagram.jpg}}
+            \caption{DFD Context Diagram}
+
+    \end{figure}
+
+
+\chapter{Level 0 Diagram}
+    \begin{figure}
+
+            \centerline{\includegraphics[height=13cm]{DFDLevel0.jpg}}
+            \caption{DFD Level 0 Diagram}
+
+    \end{figure}
+
