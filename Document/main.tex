@@ -8,11 +8,35 @@
 \usepackage[T1]{fontenc}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \usepackage{float}
+\RequirePackage{titletoc}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%
+\titlecontents{chapter}[1.3cm] % <-- seems to set some specific left margin
+{\addvspace{3mm}}
+{\makebox[0cm][r]{\large\bf\hspace{.0em}\thecontentslabel\hspace{.75cm}}}
+{} %     ^^^ pretendously zero width box puts its contents in the left margin
+{\hfill\makebox[-3cm]{\thecontentspage}}  % 3cm
+%%
+\titlecontents{section}[2cm] % <-- again this left (additional?) margin
+{\addvspace{3mm}}
+{\makebox[0cm][r]{\thecontentslabel\hspace{.75cm}}} % box pushed to the left
+{}
+{\hfill\makebox[-3cm]{\thecontentspage}}  % 3cm = twice 1.5cm
+[\addvspace{0mm}]
+
+%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 
 \include{intro}  
+
+
+
 
 	\tableofcontents 
 	\part{Introduction}
