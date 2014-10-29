@@ -5,38 +5,38 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Student or professor correctly logs into the system}
-        Description: The student or professor logs into the system with the correct username and password.\\
-        Primary Actors: Student, Professor\\
+    \begin{section}{Student or instructor correctly logs into the system}
+        Description: The student or instructor logs into the system with the correct username and password.\\
+        Primary Actors: Student, Instructor\\
         Secondary Actor: System\\
         Steps:
         \begin{enumerate}
-            \item The student or professor enters his/her correct NetID as a username.
-            \item The student or professor enters his/her correct password.
-            \item The student or professor clicks the “Login” button or the enter key.
+            \item The student or instructor enters his/her correct NetID as a username.
+            \item The student or instructor enters his/her correct password.
+            \item The student or instructor clicks the ''Login'' button or the enter key.
         \end{enumerate}
         Successful Post Condition:\\
         \begin{itemize}
-        \item The student or professor is successfully logged into his/her account on the system and can see his/her homepage on the screen.\\
+        \item The student or instructor is successfully logged into his/her account on the system and can see his/her homepage on the screen.\\
         Exceptional Condition:
         \item The system does not recognize that the correctly entered username and password are associated with an existing account.
         \end{itemize}
         \end{section}
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \begin{section}{Student or professor incorrectly logs into the system}
-    Description: The student or professor logs into the system with an incorrect username and/or password.\\
-    Primary Actors: Student, Professor\\
+        \begin{section}{Student or instructor incorrectly logs into the system}
+    Description: The student or instructor logs into the system with an incorrect username and/or password.\\
+    Primary Actors: Student, Instructor\\
     Secondary Actor: System\\
     Steps:
         \begin{enumerate}
-            \item The student or professor enters an incorrect NetID as a username.
+            \item The student or instructor enters an incorrect NetID as a username.
             	and/or
-            \item The student or professor enters an incorrect password.
-            \item The student or professor clicks the “Login” button or the enter key.\\
+            \item The student or instructor enters an incorrect password.
+            \item The student or instructor clicks the ''Login'' button or the enter key.\\
         \end{enumerate}
     Successful Post Conditions:
         \begin{itemize}
-            \item The system prohibits the student or professor from logging into the system with a NetID and password that do not match.
+            \item The system prohibits the student or instructor from logging into the system with a NetID and password that do not match.
             \item The system sends a reply that says that the login was unsuccessful.
             \item The system prompts the user to try entering a username and password again.
         \end{itemize}
@@ -45,20 +45,25 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-    \begin{section}{Student or professor correctly logs out of the system}
-        Description: The student or professor is able to successfully log out of the system.\\
-        Primary Actors: Student, Professor\\
+    \begin{section}{Student or instructor correctly logs out of the system}
+        Description: The student or instructor is able to successfully log out of the system.\\
+        Primary Actors: Student, Instructor\\
         Secondary Actor: System\\
         Steps:
         \begin{itemize}
-            \item The student or professor clicks the “Log Out” button.
+            \item The student or instructor clicks the ''Log Out'' button.
             \item Successful Post Condition:
-            \item The student or professor receives a reply from the system that says that the log out was successful.
+            \item The student or instructor receives a reply from the system that says that the log out was successful.
         \end{itemize}
         Exceptional Condition:
         \begin{itemize}
-            \item The “Logout” button does not have the functionality to successfully log out the student or professor.
+            \item The ''Logout'' button does not have the functionality to successfully log out the student or instructor.
         \end{itemize}
+            \begin{figure}[H]
+            \centerline{\includegraphics[height=12cm]{UILogin.jpg}}
+            \caption{Login UI}
+    \end{figure}
+
     \end{section}
 
 
@@ -66,4 +71,5 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
