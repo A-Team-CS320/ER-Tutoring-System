@@ -28,9 +28,7 @@
 \include{performance_req}
 \include{safety_req}
 \include{accuracy_req}
-\include{professor_req}
 
 \part{Use Cases}
 \include{robustness_usecases}
-\include{login_use}
 \end{document}
