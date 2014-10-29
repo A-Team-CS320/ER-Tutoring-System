@@ -7,15 +7,17 @@
 \usepackage{graphicx}
 \usepackage[T1]{fontenc}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
+\usepackage{float}
 
 
 \begin{document}
 
 \include{intro}  
-	\tableofcontents 
 
+	\tableofcontents 
+	\part{Introduction}
 \include{abstract}
+
   
   
 \part{Diagrams}    
@@ -28,7 +30,10 @@
 \include{performance_req}
 \include{safety_req}
 \include{accuracy_req}
+\include{professor_req}
 
 \part{Use Cases}
 \include{robustness_usecases}
+\include{login_use}
+
 \end{document}
