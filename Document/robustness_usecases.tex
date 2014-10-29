@@ -1,37 +1,86 @@
 \chapter{Robustness Use Cases}
+    \begin{section}{Student Enters Diagram}
+        Description: The student submits a diagram in either Chen or CF that is correct but is not the same as the instructor's.\\
+        Primary Actors: Student, System\\
+        Secondary Actor: Professor\\
+        Successful Post Condition: The system marks the student correct.\\
+        Steps:
+        \begin{enumerate}
+            \item The student enters a diagram into the system.
+            \item The system checks the diagram against the professor-submitted diagram(s).
+        \end{enumerate}
+        Exceptional Conditions:
+        \begin{itemize}
+            \item The student is unable to submit a diagram as an answer to a question.
+            \item The system cannot process the student's submitted diagram so that it can be compared to the professor's uploaded answer.
+            \item The system cannot send the student a response that says if his/her diagram was correct or incorrect.
+        \end{itemize}
+    \end{section}
+    
+    \begin{section}{Student Enters Variant of Incorrect Diagram}
+        Description: The student submits a diagram in either Chen or CF that is incorrect.\\
+        Primary Actors: Student, System \\
+        Secondary Actor: Professor\\
+        Successful Post Condition: The system marks the student incorrect. \\
+        Steps:	
+        \begin{enumerate}
+            \item The student enters a diagram into the system.
+            \item The system checks the diagram against the professor-submitted diagram(s).
+        \end{enumerate}
+        Exceptional Conditions:
+        \begin{itemize}
+            \item The student is unable to submit a diagram as an answer to a question.
+            \item The system cannot process the student's submitted diagram so that it can be compared to the professor's uploaded answer.
+            \item The system cannot send the student a response that says if his/her diagram was correct or incorrect.
+        \end{itemize}
+    \end{section}
+    
+    \begin{section}{Professor or Content}
+        Author enters unspecified answer format\\
+        Description: The professor or content author enters an answer into the system without specifying a format.\\
+        Primary Actor: Professor (or Content Author)\\
+        Secondary Actor: System\\
+        Successful Post Condition: The system sends a prompt to the professor specifying that the answer was not recorded in the system and that he/she must submit an answer format. \\
+        Steps:	
+        \begin{enumerate}
+            \item The professor submits an answer into the system.	
+            \item The system recognizes that the professor did not submit an answer format.
+        \end{enumerate}
+    \end{section}
+    
     \begin{section}{Online Tutor System Should Never Crash}
         Description: Nothing any user does should crash the web browser.  The online tutor system may 
-        reach an exception when performing a specific task, but it will never crash the user’s browser 
+        reach an exception when performing a specific task, but it will never crash the user's browser 
         or machine.  Each online tutor system task exception should be handled.
     \end{section}
     
     \begin{section}{UI Should React Correctly to User Actions}
-        Description: The UI should correctly react to what the user’s actions command.  
+        Description: The UI should correctly react to what the user's actions command.  
         If a specific user action was not accounted for when the UI was created (the UI does not have the 
         ability to make a response to that action) the online tutor system will reach an exception and that 
         exception should be handled by the UI remaining in its current state.
     \end{section}
     
     \begin{section}{Student Submits Variant of Correct Answer Diagram}
-        Description: The student answers an assignment question with a diagram that is correct, but is not exactly the same as the author’s answer diagram. \\
+        Description: The student answers an assignment question with a diagram that is correct, but is not exactly the same as the author's answer diagram. \\
         Primary Actor: Student \\
         Precondition: Student is logged into the system and has placed a diagram in a question answer box for an assignment \\ 
         Trigger: Student submits the assignment \\
-        Successful End Condition: The student’s question is marked “correct.” \\
-        Failed End Condition: The student’s question is marked “incorrect.” \\
+        Successful End Condition: The student's question is marked ''correct.'' \\
+        Failed End Condition: The student's question is marked ''incorrect.'' \\
         \\
         Steps:
         \begin{enumerate}
             \item{The student answers an assignment question by putting a diagram in the answer box for that question.}
             \item{The student submits the assignment.}
-            \item{The online tutoring system checks the student’s diagram against the author’s previously uploaded answer diagram.}
+            \item{The online tutoring system checks the student's diagram against the author's previously uploaded answer diagram.}
             \item{The online tutoring system recognizes that the two diagrams are alike, but are not exactly the same.}
         \end{enumerate}
         Exceptions:
         \begin{itemize}
-            \item{The student is unable to submit a diagram as an answer to a question.  The student’s question is marked “incorrect.”} 
-            \item{The online tutoring system is unable process the student’s submitted diagram so that it can be compared to the author’s uploaded answer.  
-            The student’s question is marked “incorrect.”}
+            \item{The student is unable to submit a diagram as an answer to a question.  The student's question is marked ''incorrect.''} 
+            \item{The online tutoring system is unable process the student's submitted diagram so that it can be compared to the author's uploaded answer.  
+            The student's question is marked ''incorrect.''}
         \end{itemize}
     \end{section}
     
@@ -39,7 +88,7 @@
         Description: When an author is in the process of creating a question, he/she must completely
         fill out a question creation form for that question.  This question creation form includes the question, 
         which specifies the format that the answer diagram should have, and the answer diagram(s) for that question. 
-        If the author presses the form’s “Submit” button before it is complete, the online tutoring
+        If the author presses the form's ''Submit'' button before it is complete, the online tutoring
         system will continue to display the question creation form and highlight the fields that have 
         not yet been completed.
     \end{section}
