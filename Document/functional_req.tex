@@ -52,43 +52,43 @@
 
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor logs in}
-		Description: The instructor is logging in, in order to access the Online Tutor System, using his/her NetID and password. \newline
-		Primary Actor: Instructor \newline
-		Precondition: The instructor is on the login page of the system. \newline
-		Trigger: The instructor wants to log into the Online Tutor System. \newline
-		Successful End Condition: The instructor successfully logs into the Online Tutor System. \newline
-		Failed End Condition: The instructor is unable to log into the Online Tutor System. \newline
+    \begin{section}{Author logs in}
+		Description: The Author is logging in, in order to access the Online Tutor System, using his/her NetID and password. \newline
+		Primary Actor: Author \newline
+		Precondition: The Author is on the login page of the system. \newline
+		Trigger: The Author wants to log into the Online Tutor System. \newline
+		Successful End Condition: The Author successfully logs into the Online Tutor System. \newline
+		Failed End Condition: The Author is unable to log into the Online Tutor System. \newline
         \newline
         Steps:
         \begin{enumerate}
-            \item{The instructor enters his/her NetID in the username textfield.}
-            \item{The instructor enters his/her password in the password textfield.}
-            \item{The instructor clicks on the ‘login’ button to enter the system.}
+            \item{The Author enters his/her NetID in the username textfield.}
+            \item{The Author enters his/her password in the password textfield.}
+            \item{The Author clicks on the ‘login’ button to enter the system.}
         \end{enumerate}
         Exceptions:
         \begin{itemize}
-            \item{The instructor enters an incorrect NetID. In this case a message will be displayed that notifies that the NetID is incorrect.}
-			\item{The instructor enters an incorrect password. In this case a message will be displayed that notifies that the password is incorrect.}
+            \item{The Author enters an incorrect NetID. In this case a message will be displayed that notifies that the NetID is incorrect.}
+			\item{The Author enters an incorrect password. In this case a message will be displayed that notifies that the password is incorrect.}
         \end{itemize}
     \end{section}	
 	
 	%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor creates new assignment}
-		Description: Instructor creates new assignment for students to be completed \newline
-		Primary Actor: Instructor \newline
-		Precondition: Instructor is logged in into tutoring system \newline
-		Trigger: Instructor clicks on the create an assignment link \newline
+    \begin{section}{Author creates new assignment}
+		Description: Author creates new assignment for students to be completed \newline
+		Primary Actor: Author \newline
+		Precondition: Author is logged in into tutoring system \newline
+		Trigger: Author clicks on the create an assignment link \newline
 		Successful End Condition(s): Assignment is added to the database and students are able to see it \newline
 		Failed End Condition: No new assignment added \newline
         \newline
         Steps:
         \begin{enumerate}
-            \item{Instructor clicks on the Create new assignment button on his homepage.}
-            \item{Instructor chooses the class assignment is made for.}
-            \item{Instructor names the assignment}
-            \item{Instructor picks a deadline for the assignment.}
-            \item{Instructor clicks submit button .}
+            \item{Author clicks on the Create new assignment button on his homepage.}
+            \item{Author chooses the class assignment is made for.}
+            \item{Author names the assignment}
+            \item{Author picks a deadline for the assignment.}
+            \item{Author clicks submit button .}
             \item{Assignment is added to database}
         \end{enumerate}
         Exceptions:
@@ -99,45 +99,45 @@
 
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor Removes Assignment}
-		The instructor will be removing an assignment from the assignment list. \newline
-		Primary Actor: Instructor \newline
+    \begin{section}{Author Removes Assignment}
+		The Author will be removing an assignment from the assignment list. \newline
+		Primary Actor: Author \newline
 		Precondition: There must be at least one assignment in the database. \newline
-		Trigger: Instructor selects to remove an assignment \newline
+		Trigger: Author selects to remove an assignment \newline
 		Success end condition: The author has successfully deleted an assignment \newline
 		Failed end condition: The assignment list still shows the assignment that was supposed to be delete \newline
 		\newline
         Steps:
         \begin{enumerate}
-            \item{Instructor logs into system.}
-            \item{Instructor selects remove assignment(s).}
-            \item{The instructor now has a list of assignments from which they can choose from.}
-            \item{The instructor selects one or more assignments to delete.}
+            \item{Author logs into system.}
+            \item{Author selects remove assignment(s).}
+            \item{The Author now has a list of assignments from which they can choose from.}
+            \item{The Author selects one or more assignments to delete.}
 			\item{Select delete assignment(s) and then the select assignments are deleted.}
         \end{enumerate}
         Exceptions:
         \begin{itemize}
-            \item{Assignment was already deleted by another instructor.}
+            \item{Assignment was already deleted by another Author.}
         \end{itemize}
     \end{section}		
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor adds/removes students to the assignment}
-		Description: Instructor adds and removes student who can view and complete a particular assignment \newline
-		Primary Actors: Instructor, Student \newline
-		Precondition: Instructor is logged into the system \newline
-		Trigger: Instructor clicks on “add/remove students” button in the particular assignment \newline
+    \begin{section}{Author adds/removes students to the assignment}
+		Description: Author adds and removes student who can view and complete a particular assignment \newline
+		Primary Actors: Author, Student \newline
+		Precondition: Author is logged into the system \newline
+		Trigger: Author clicks on “add/remove students” button in the particular assignment \newline
 		Successful End Condition: Added students are able to see a particular assignment, while removed students can no longer see it \newline
 		Failed End Condition: Added student cannot see the assignment/removed students can see the assignment \newline
         \newline
         Steps:
         \begin{enumerate}
-            \item{Instructor chooses assignment he wants to add/remove students to from the list of already created assignments.}
-            \item{Instructor clicks on “add/remove students” button.}
-            \item{Instructor is given an option to choose an already existing list of students.}
-            \item{Instructor can then choose individual students from student database.}
-            \item{Instructor then can remove any students from the list of students who have been added to the assignment.}
-            \item{Instructor then click on submit button.}
+            \item{Author chooses assignment he wants to add/remove students to from the list of already created assignments.}
+            \item{Author clicks on “add/remove students” button.}
+            \item{Author is given an option to choose an already existing list of students.}
+            \item{Author can then choose individual students from student database.}
+            \item{Author then can remove any students from the list of students who have been added to the assignment.}
+            \item{Author then click on submit button.}
 			\item{List of students is updated in the database.}
         \end{enumerate}
         Exceptions:
@@ -147,22 +147,22 @@
     \end{section}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor adds/removes question from the question bank to the assignment}
-		Description: Instructor adds and removes questions for an already created assignment \newline
-		Primary Actor: Instructor \newline
-		Precondition:  Instructor is logged in \newline
-		Trigger: Instructor clicks on ''add/remove question'' button in the particular assignment \newline
+    \begin{section}{Author adds/removes question from the question bank to the assignment}
+		Description: Author adds and removes questions for an already created assignment \newline
+		Primary Actor: Author \newline
+		Precondition:  Author is logged in \newline
+		Trigger: Author clicks on ''add/remove question'' button in the particular assignment \newline
 		Successful End Condition: Question is added/removed from list of question for a particular assignment \newline
 		Failed End Condition: Question that was added/removed is still in the list of questions for the assignment \newline
 		\newline
         Steps:
         \begin{enumerate}
-            \item{Instructor chooses assignment he wants to add/remove questions to from the list of already created assignments.}
-            \item{Instructor clicks on “add/remove questions” button.}
-            \item{Instructor can search the bank of questions that has been created by a type/topic of question.}
-            \item{Instructor adds question he likes to the assignment.}
-            \item{Instructor can remove any question he previously chosen from the list of questions.}
-            \item{Instructor then click on submit button.}
+            \item{Author chooses assignment he wants to add/remove questions to from the list of already created assignments.}
+            \item{Author clicks on “add/remove questions” button.}
+            \item{Author can search the bank of questions that has been created by a type/topic of question.}
+            \item{Author adds question he likes to the assignment.}
+            \item{Author can remove any question he previously chosen from the list of questions.}
+            \item{Author then click on submit button.}
 			\item{List of question for that assignment is updated in the database.}
         \end{enumerate}
         Exceptions:
@@ -172,20 +172,20 @@
     \end{section}
     
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor views assignment}
-		The instructor will be viewing any assignment from the assignment list \newline
-		Primary Actor: Instructor \newline
-		Precondition: Instructor is logged into the system \newline
-		Trigger: Instructor selects to view an assignment \newline
-		Successful End Condition: Assignment is retrieved from database and can be viewed by instructor \newline
+    \begin{section}{Author views assignment}
+		The Author will be viewing any assignment from the assignment list \newline
+		Primary Actor: Author \newline
+		Precondition: Author is logged into the system \newline
+		Trigger: Author selects to view an assignment \newline
+		Successful End Condition: Assignment is retrieved from database and can be viewed by Author \newline
 		Failed End Condition: Assignment failed to load \newline
         \newline
         Steps:
         \begin{enumerate}
-            \item{Instructor selects view assignment.}
-            \item{Instructor now has a list of assignments from which they can choose from.}
-            \item{Instructor selects an assignment.}
-            \item{Page will appear allowing the instructor to view the assignment/questions.}
+            \item{Author selects view assignment.}
+            \item{Author now has a list of assignments from which they can choose from.}
+            \item{Author selects an assignment.}
+            \item{Page will appear allowing the Author to view the assignment/questions.}
         \end{enumerate}
         Exceptions:
         \begin{itemize}
@@ -194,20 +194,20 @@
     \end{section}	
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor views Student reports}
-		The instructor wants to view any student's report for any assignment that the student attempted. \newline
-		Primary Actor: Instructor \newline
+    \begin{section}{Author views Student reports}
+		The Author wants to view any student's report for any assignment that the student attempted. \newline
+		Primary Actor: Author \newline
 		Precondition: Student has attempted the assigned questions \newline
-		Trigger: Instructor attempts to view students stats \newline
+		Trigger: Author attempts to view students stats \newline
 		Successful End Condition: Students scores are retrieved and displayed on the report page \newline
 		Failed End Condition: Student report failed to load \newline
 		\newline
         Steps:
         \begin{enumerate}
-            \item{Instructor selects to view assignments list.}
-            \item{Instructor selects assignments.}
+            \item{Author selects to view assignments list.}
+            \item{Author selects assignments.}
             \item{System sends statistics of the class of the select assignment (overall average class attempts, average grade, median grade, highest grade, lowest grade, etc).}
-            \item{Instructor can select to click on individual student statistics of the assignment.}
+            \item{Author can select to click on individual student statistics of the assignment.}
 			\item{System displays statistic of individual student for the select assignment.}
         \end{enumerate}
         Exceptions:
@@ -224,26 +224,26 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{section}{User registers for the Online Tutor System}
-		Description: An instructor or a student registers for the Online Tutor System. \newline
-		Primary Actor: Instructor or student \newline
-		Precondition: The instructor/student has navigated to the website of the Online Tutor System. \newline
-		Trigger: The instructor/student clicks the button to register for the Online Tutor System. \newline
-		Successful End Condition: The instructor/student is successfully registered and provided access to the Online Tutor System. \newline
-		Failed End Condition: The instructor/student is not successfully registered and does not have access to the Online Tutor System. \newline
+		Description: An Author or a student registers for the Online Tutor System. \newline
+		Primary Actor: Author or student \newline
+		Precondition: The Author/student has navigated to the website of the Online Tutor System. \newline
+		Trigger: The Author/student clicks the button to register for the Online Tutor System. \newline
+		Successful End Condition: The Author/student is successfully registered and provided access to the Online Tutor System. \newline
+		Failed End Condition: The Author/student is not successfully registered and does not have access to the Online Tutor System. \newline
 		\newline
         Steps:
         \begin{enumerate}
-            \item{The instructor/student fills in his/her NetID.}
-            \item{The instructor/student fills in his/her password corresponding with his/her NetID.}
+            \item{The Author/student fills in his/her NetID.}
+            \item{The Author/student fills in his/her password corresponding with his/her NetID.}
             \item{The NetID and password are the same NetID and password as registered at the University of Massachussetts.}
-			\item{The instructor/student clicks the ‘register’ button.}
-			\item{The instructor/student is registered in the Online Tutor System.}
-			\item{The instructor/student is redirected to his/her homepage (of which the format for instructor and student varies).}
+			\item{The Author/student clicks the ‘register’ button.}
+			\item{The Author/student is registered in the Online Tutor System.}
+			\item{The Author/student is redirected to his/her homepage (of which the format for Author and student varies).}
         \end{enumerate}
         Exceptions:
         \begin{itemize}
-            \item{The instructor/student enters an incorrect NetID that is not registered at the University of Massachusetts. In this case a message will be displayed that notifies that the NetID is incorrect.}
-			\item{The instructor/student enters a password that does not correspond to the NetID that is registered at the University of Massachusetts. In this case a message will be displayed that notifies that the password is incorrect..}
+            \item{The Author/student enters an incorrect NetID that is not registered at the University of Massachusetts. In this case a message will be displayed that notifies that the NetID is incorrect.}
+			\item{The Author/student enters a password that does not correspond to the NetID that is registered at the University of Massachusetts. In this case a message will be displayed that notifies that the password is incorrect..}
         \end{itemize}
     \end{section}		
 	
@@ -344,7 +344,7 @@
 
     
     
-    \begin{section}{Student Submits Answer to Question}
+    \begin{section}{Author}
     Primary Actor: Student\\
     Precondition: Student has previously answered the question that he/she wants to submit.\\
     Trigger: Student wants to submit a question.\\
@@ -448,7 +448,7 @@ Exceptions:
     
     \begin{section}{Author Adds a New Question to Question Bank}
       Description: Author adds a new question to the question bank. \newline
-        Primary Actor: Instructor.  \newline
+        Primary Actor: Author.  \newline
         Secondary Actor: System  \newline
         Precondition: Author is logged into the Online Tutor System. \newline
         Trigger: The author would like to add a new question to the question bank. \newline
@@ -576,4 +576,5 @@ Exceptions:
 
 
     \end{section}
+
 
