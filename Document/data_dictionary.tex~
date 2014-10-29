@@ -1,9 +1,9 @@
 \chapter{Data Dictionary}
 
+\vspace{1.5cm}
+\begin{table}[H]
 
-\begin{table}
-
-\scalebox{0.7}{
+\scalebox{0.6}{
     \begin{tabular}{ | l | l | l |l| p{5cm} |}
   \hline
     Student Info & Instructor Info & Author Info & Retrieve Question \\ \hline
@@ -13,32 +13,35 @@
     - password		&  - password      	&  - password           & - question  \\ 
 					&              	  	&                       & - assignment ID\\ \hline
 
-    
-       
-    
-Submit Answer		  	& Send Student Score & Send Feedback 				& Display Class Info\\ \hline
+      
+Submit Answer		  		& Send Student Score & Send Feedback 				& Display Assignment Info\\ \hline
 
-       - student ID   	&  - student ID    	 &  - question ID				& - class ID  \\ 
-       - question ID  	&  - instructor ID   &  - feedback information      & \\
-	   - student answer &  - student score   &               				&\\ \hline
+       - student ID   		&  - student ID    	 &  - question ID				& - assignment ID  \\ 
+       - question ID  		&  - instructor ID   &  - feedback					& - student ID	\\
+	   - student's answer 	&  - student score   &  - assignment ID				&\\ \hline
     
     
-Display Feedback		  	& Class Info 		& Update Question 				& Create New Questions/Answers\\ \hline
+Display Feedback		  	& Create New Questions/Answers/Feedback 		& Update Question 				& Add Student to Assignment\\ \hline
 
-       - student ID   			&  - student ID   		 &  - question ID				& - question ID  \\ 
-       - student answer 		&  					  	 &  - question info			    & - question info\\
-	   - question ID 			&  					   	 &               				& - answer(s) info\\ \hline    
-    
-    
-Check Scores		  	& Check Answers 		& Update Scores 				& \\ \hline
+       - student ID   			&  - question ID   		 &  - question ID				& - student ID  \\ 
+       - student answer 		&  - question info		 &  - question info			    & - assignment ID\\
+	   - question ID 			&  - correct answer		 &  - question feedback			& \\    
+								&  - feedback			 &	- question answer			& \\ \hline  
+    							
+								
+Create Assignment		  	& Update Scores  		& Update Assignment 				& Retrieve Assignment\\ \hline
 
-       - student ID 			&  - question ID   		 &  - student ID				&   \\ 
-       - question ID 			&  - student ID		  	 &  - question ID		   		&  \\
-								&  - student answer	  	 &  - student answer		    &  \\	   
-	    						&  - question answer  	 &               				&  \\ \hline       
-    
-    
-    
+       - name					&  - question ID		 &  - instructor ID				& - Instructor ID   \\ 
+       - assignment ID 			&  - student answer		 &  - students[]		   		& - students[] \\
+	   - students[]				&  					  	 &  - assignment name		    & - assignment name \\	   
+	    						&  					  	 &  - assignment ID				& - assignment ID \\ \hline       
+Check Answers 		& 				& 		 & \\ \hline
+
+	   - question ID   		 &  				&    	&\\ 
+	   - student ID		  	 &  		   		&  	 	&\\
+	   - student answer	  	 &  		    	&   	&\\	   
+	   - question answer  	 &               	&  		&\\ \hline 
+								
     \hline
    
     \end{tabular}
@@ -49,5 +52,6 @@ Check Scores		  	& Check Answers 		& Update Scores 				& \\ \hline
     
 
     
+
 
 
