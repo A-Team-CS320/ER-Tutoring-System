@@ -345,7 +345,23 @@
     
     
     \begin{section}{Student Submits Answer to Question}
+    Primary Actor: Student\\
+    Precondition: Student has previously answered the question that he/she wants to submit.\\
+    Trigger: Student wants to submit a question.\\
+    Successful End Condition:Question is submited.\\
+    Failed End Condition: Student does not submit the question.\\
+    Steps:
+    \begin{enumerate}
+    \item Student clicks on submit.
+    \item Student sees a feedback for the question he answered.
+    \end{enumerate}
+    Exceptions:
+    \begin{itemize}
     
+    \item Internet goes offline while the student is submitting the question.
+    \item Student gets the wrong feedback
+    
+    \end{itemize}
     \end{section}
     
 
