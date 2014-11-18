@@ -1,5 +1,5 @@
 \chapter{Deployment Design}
-      In this high-level deployment diagram, we show the technologies used for each component of the system. The client will use HTML, CSS, and JS, and will be run on the user’s machine. This will communicated with the server, which will be built with Nodejs and will run on a Unix system. These components will use a Postgres Database in order to store all of the information of the system (user results, assignments, etc.). The database will be on the same machine as the server.
+      In this high-level deployment diagram, we show the technologies used for each component of the system. The client will use HTML, CSS, and JS, and will be run on the user$'$s machine. This will communicated with the server, which will be built with Nodejs and will run on a Unix system. These components will use a Postgres Database in order to store all of the information of the system (user results, assignments, etc.). The database will be on the same machine as the server.
                         \begin{figure}[H]
             \centerline{\includegraphics[height=3cm, width=10cm]{Deployment.jpg}}
             \caption{Deployment Diagram}
@@ -22,7 +22,7 @@ This is the diagram for the Client module. The following are the methods contain
     \end{figure}
     
     \chapter{Server}
-The server plays a huge role in our system, it is in charge in keeping connection with the Client and the database. The Dispatcher will process the question submitted by the user and request its validation with the validator. Then, the validator checks whether the question submitted by the student is actually right or not, by going to the database accessor. Moreover, when validator check if a question is right or not, it sends a customized feedback for that particular question.
+The server plays a huge role in our system, it is in charge of keeping connection with the Client and the database. The Dispatcher will process the question submitted by the user and request its validation with the validator. Then, the validator checks whether the question submitted by the student is actually correct or not, by going to the database accessor. Moreover, when the validator checks if a question is correct or not, it sends a customized feedback for that particular question.
 The server also is able to update a particular question in the database that has been saved by the author. 
 
                         \begin{figure}[H]
