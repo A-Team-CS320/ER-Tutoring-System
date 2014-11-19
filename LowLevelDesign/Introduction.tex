@@ -1,0 +1,33 @@
+\chapter {System Overview}
+
+The purpose of this system is to be an online tutor for students who are learning to create ER diagrams. This learning tool teaches students to build ER diagrams and allows them to submit the diagrams that they create as responses to assignment questions. The assignments are created by instructors using questions that are taken from the question bank. Each question, that is stored in 
+the question bank, is created by an author and includes any correct answers and necessary feedback that correspond to it. After a student submits a diagram to be graded, he or she is either notified that diagram is correct or given feedback about the incorrectness of the diagram. This allows each student to learn from his or her mistakes. Overall, the benefits of this system are that it serves as an easier and more efficient tool for students who are learning to create ER diagrams and submitting assignments and instructors who are creating assignments and viewing student reports.  
+
+\chapter{Stakeholders}
+The stakeholders of the system involve the three defined user groups (authors, instructors and students), as well as the client, management, administrators, and developers. The administrators of the system will be involved in managing the three user groups. Administrators will give access rights to each group based on what they need to do (Authors can create questions, but instructors/students can$'$t, etc.). While the system itself has the capability to manage direct user registration the administrators have a stake in ensuring that the system is accessible to those who need it. The users all have a stake in either accessing, modifying, or creating the questions hosted within the system, and the question bank in general. The instructors who have access to the system have a stake in creating groups of questions for students and in a lesser sense creating or editing questions to their needs, and accessing reported student progress on those content clusters. Authors primarily add and edit questions in the bank and will not directly interface with student answers. Students do not create or edit questions, but answer and submit content clusters as assigned by instructors. The client and management have stakes in the system because they are responsible for providing guidance to ensure that the final product is what they want. Naturally, this leaves the developers to have a stake in the system by implementing the wants and needs of the client and management into the system.
+
+
+\chapter{Scope of the Document}
+This document describes the architectural layout of the online tutoring system. It includes an overview, stakeholders and a glossary to help define and describe the important system attributes. In addition, this document displays many design modules that come together to help form the architecture of the online tutoring system.  These design modules include a deployment design, which describes the technologies used for each component of the system, a  modular design, which describes the different client and server modules that are involved in transferring data, a client design, which describes all of the methods that are responsible for performing different client actions, and a server design, which describes the server$'$s role as the connection between the client and the data base.     
+
+
+\chapter{Definitions}
+\begin{itemize}
+\item The online tutor system is the system that is being created in order to facilitate the instruction and education of constructing ER diagrams.
+\item A student is a user that is accessing the online tutor system in order to learn and practice making ER diagrams.
+\item The learning tool is the system that is used by a student to understand how to create ER diagrams.
+An assignment is a collection of questions that the instructor selects for students to answer by a certain date.
+\item Each student report, for a particular assignment, displays a unique student$'$s results to that assignment.
+\item The instructor is the user who creates assignments by selecting questions from the question bank for students to answer. Also, the instructor can view the student reports for each assignment.
+\item Feedback is the message that is returned to each student after he/she submits an answer. It can be composed of hints, suggestions and messages from the author.
+The author is the user who creates the questions, answers and feedback. Also, the author uploads those questions, answers and feedback to the question bank for instructors to use when creating assignments.
+\item Draw is the action that students or author performs to insert the shapes and words from the toolbox to the answer area of the UI. This action occurs when students are answering questions or when the author is creating answers to questions.
+\item A question is created by an author (for an instructor to pull from the question bank), assigned by an instructor (in an assignment) and answered by a student (with an ER diagram).
+\item  The toolbox is the area of the UI that contains all of the shapes, lines and textboxes for the user or author to drag and drop onto the draw space when drawing.
+\item An answer is created by an author (with a corresponding question) and constructed by a student (in the form of an ER diagram) to respond to an assigned question. A student$'$s answer to a specific question in an assignment will be graded when that assignment is submitted.
+\item NetID is the username that a user uses to log into the system.
+\item Password is the password that a user uses to log into the system.
+\item The question bank is the database that contains all of the questions that have been created by the author. The instructor selects questions from the question bank to create assignments for students.
+\item The draw space is the area in which the answer to a question is drawn.
+\item The user is the person using the online tutoring system. There are three different types of users: students, instructors and authors.
+\end{itemize}
