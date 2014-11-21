@@ -1,0 +1,715 @@
+\chapter{Serializer}
+\textbf{Description:} The serializer module provides a way for a client to send an ER diagram to the server by converting the ER diagram into a JSON. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item{JSON createSerialJSON(diagram) - This public method creates a JSON representation of an existing ER diagram.}
+\item{void sendJSON() - This public method sends a JSON from a client to the server.}
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item{The ER diagram that is being used by this class is an existing and completed ER diagram.}
+\end{itemize}
+\textbf{Dependencies:}
+This module is contained by the Client module and used by the DrawingWidget module. \\
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item{None}
+\end{itemize}
+ 
+\chapter{Deserializer}
+\textbf{Description:} The deserializer module provides a way for a client to receive an ER diagram from a server by converting the JSON representation of an ER diagram back into the actual ER diagram. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item{diagram unpackSerialJSON() - This public method converts the JSON representation of an ER diagram back into the actual ER diagram.}
+\item{JSON recieveJSON() - This public method allows a client to receive a JSON from the server.}
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item{The JSON that is being used by this class is the JSON representation of an existing and completed ER diagram.}
+\end{itemize}
+\textbf{Dependencies:}
+This module is contained by the Client module and uses the DrawingWidget module. \\
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item{None}
+\end{itemize}
+ 
+\chapter{Dispatcher}
+\textbf{Description:} The dispatcher takes the information from the Server and packages the information to be sent to the client side of the system. \\
+\textbf{Interface Specifications:}
+\begin{itemize}
+\item{void processRequest - This public method processes the request to be sent to the database.}
+\item{void sendToValidator - This public method sends a students answer to a question to the validator.}
+\item{value requestDBValue -- This public method returns a value that is requested from the database through the DBAccessor module.}
+\item{void sendReport -- This public method compiles and sends a report to the caller.}
+\item{void sendFeedback -- This public method compilkes and sends feedback to the caller.}
+\item{void updateQuestionBank -- This public method updates the question bank contained in the database.}
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item{The modules are online and accessible.} 
+\end{itemize}
+\textbf{Dependencies:}
+This module is contained by the Server module and is dependent on the Validator module and DBAccessor module. \\
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item {None}
+\end{itemize}
+
+
+%MATT'S USE CASES:
+
+
+
+\chapter{Toolbox}
+\textbf{Description:} The Toolbox contains all of the different entities and relations that are possible for use in the ER Diagram.  The Toolbox has drag and drop capabilities to allow the user to click and then drag the desired entity or relation that they wish to insert into the Canvas to create the ER Diagram. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item{void selectEntity(entity) - this method is the user selecting an entity from the Toolbox and dragging it into the Canvas.}
+\item{void selectRelation(relation) - this method is the user selecting a relation from the Toolbox and dragging it into the Canvas.}   
+\item{List<entity> interactiveEntryList - variable that lists all of the possible entities in the Toolbox}
+\item{List<relation> interactiveRelationList - variable that lists all of the possible relations in the Toolbox}
+\end{itemize}
+\textbf{Assumptions:} 
+\begin{itemize}
+\item {The Toolbox contains all of the possible entities and relations possible and the user can drag and drop them.}
+\end{itemize}
+\textbf{Dependencies:} This module is dependent on the DrawingWidget module, and Question module.  This module depends on the Entity module and the Relation module. \\ 
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item{None} 
+\end{itemize}
+ 
+\chapter{Relation}
+\textbf{Description:} This module contains all of the relations or lines that connect the different entities.  There will be options for both Chen and Crows Foot styles of ER Diagrams.  The relations will show if it is many to one, one to many, one to one or many to many. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item{void addLabel(String) - Adding a description to the relation to describe the name and style of relation such as one to one, one to many, many to many, and many to one.}
+\item{void relation(type) - creating a relation, the constructor of the class}
+\item{Relation relation - the relation variable that is used in the class}
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item{All possible relations are present} 
+\end{itemize}
+\textbf{Dependencies:} This module is dependent on the Toolbox module and the DrawingWidget module.  It depends on the Entity module. \\
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{String type - the type of relation}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item{None} 
+\end{itemize}
+
+\chapter{Canvas}
+\textbf{Description:} This module contains all the necessary components to build a graphical user interface. We want to ensure that all the components are well drawn and easy for the user to use. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item{deleteEntity(entity):void - deletes the specified entity}
+\item{moveEntity(entity):void - moves the specified entity}
+\item{deleteRelation(relation):void - deletes the specified relation}
+\item{moveRelation(relation):void - moves the specified relation}
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item{None} 
+\end{itemize}
+\textbf{Dependencies: Canvas depends on the ToolBox and the DrawingWidget.}
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item{None} 
+\end{itemize}
+
+\chapter{DrawingWidget}
+\textbf{Description:} This will contain everything needed in order to draw and view an ER diagram. This includes a Toolbox for selecting items to draw, and a Canvas to place the ER diagram. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item{Toolbox toolBox - Toolbox instance that will allow users to pick elements to draw}
+\item{Canvas canvas - Canvas where the ER diagram will be drawn}
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item {None}
+\end{itemize}
+\textbf{Dependencies:} This module is dependent on the Toolbox and Canvas modules \\
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{int size - size of the entire widget}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item{None} 
+\end{itemize}
+
+\chapter{Entity}
+\textbf{Description:} This module contains all the entities to be connected by relations in the ER diagram. There will be options for both Chen and Crows Foot styles of ER Diagrams. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item{void addText (String) - adding text to be placed inside of the entity.}
+\item{void entity(type) - creating an entity, the constructor of the class.} 
+\item{Entity entity - the entity variable that is used in the class.}
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item{All possible entities are present.}
+\end{itemize}
+\textbf{Dependencies:} This module is dependent on the Toolbox module and DrawingWidget module. It depends on the Relation module. \\
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{String type - the type of entity}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item{None} 
+\end{itemize}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%UML%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{UML 3}
+
+    \begin{figure}[H]
+            \centerline{\includegraphics[height=9cm, width=10cm]{UML_3.jpeg}}
+            \caption{UML3 Diagram}
+    \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%UML%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{ReportFormatter}
+\textbf{Description:} This module formats the student reports to be presented to an instructor. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item{void collectStudentReports() - collects the student reports from the database. }
+\item{void formatReports() - formats the student reports to be readable.}
+\item{void render() - renders the page and shows the student reports.}
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item{There are reports to format and present} 
+\end{itemize}
+\textbf{Dependencies:} This module is dependent on the DBAccessor module. \\ 
+\textbf{Internal Structure:}
+\begin{itemize}
+        	\item{\textbf{Internal Methods:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+        	\item{\textbf{Internal Variables:} 
+        	\begin{itemize}
+        	\item{None}
+        	\end{itemize}}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item{None} 
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%UML%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{UML 1}
+
+    \begin{figure}[H]
+            \centerline{\includegraphics[height=9cm, width=12cm]{UML_1.jpg}}
+            \caption{UML Diagram}
+    \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%UML%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+\chapter{User}
+
+User module provides a way to retrieve user’s information. It handles logging in, logging out and user registration.\\
+\textbf{Interface Specifications:}\\
+\begin{itemize}
+    \item void create account()- Creates account, using user's input. Create a new database entry with user's ID, account type, name/email/password etc.
+   \item  void logIn()- read user's input authentication input and create a new session.  
+\item  void logOut()- finish user's session.
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item None
+\end{itemize}
+\textbf{Dependencies:}
+Students, Instructors, Authors depend on User Module\\
+\textbf{Internal Structure:}
+    \begin{itemize}
+      \item \textbf{Internal Methods:}
+            \begin{itemize}
+                \item void connectToUserDatabase()- Handles database connection.
+                \item void checkNetIDUnique()- Check whether given ID does not exist in database upon registration.
+            \end{itemize}
+       \item \textbf{Internal Variables:}
+        \begin{itemize}
+            \item  name: String
+            \item  netID: String
+            \item  password: String
+        \end{itemize}
+        \end{itemize}
+         \textbf{Hidden Information:}
+        \begin{itemize}
+        \item None
+        \end{itemize}
+   
+
+
+
+
+
+
+\chapter{Student}
+\textbf{Descrioption:} Student Module manages student's account. It handles the access to the assignment list\\
+\textbf{Interface Specifications:}
+\begin{itemize}
+   \item void selectAssignment()- reads user's input to obtain assignment ID and then retrieves assignment from database
+    \item void displayQuestion()- outputs question based on its ID
+    \item void selectQuestion()- reads user's input to obtain question ID and then retrieves assignment from database
+    \item void answerQuestion()- handles the input provided by Student
+    \item void draw()- handles the input provided by user on the drawing board
+    \item void viewFeedback()- outputs feedback based on the student's answer
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+    \item Logging in is handled by User Module
+    \item Account type is provided.
+\end{itemize}
+\textbf{Dependencies:}
+\begin{itemize}
+    \item Depends on Draw
+    \item Assignment
+    \item Question Modules.
+\end{itemize}
+\textbf{Internal Structure:}
+\begin{itemize}         
+   \item \textbf{Internal Methods:}
+           \begin{itemize}
+           \item None
+           \end{itemize}  
+          \item  \textbf{Internal Variables:}
+                  \begin{itemize}
+            \item assignment: String[]
+        \end{itemize}
+        \end{itemize}
+     \textbf{Hidden Information:}
+    \begin{itemize}
+    \item None
+    \end{itemize}
+
+
+
+ 
+
+\chapter{Instructor}
+\textbf{Description:}Instructor module manages instructor’s account. It provides interface to create new assignments, add questions to individual assignments, make lists of students that can access a particular assignment and finally to check student report.\\
+\textbf{Interface Specifications:}
+\begin{itemize}
+     \item   void createAssignment(): handler for creating a new assignment, reading assignment name and list of students that instructor provides, and creating list of questions
+    \item    void viewStudentReport(): accesses the scores database and outputs the data upon instructors request
+    \item     void editStudentReport(): instructor can update student scores and information
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item Depends on assignment and question, and drawing tool modules
+\end{itemize}
+\textbf{Dependencies:}
+Students, Instructors, Authors depend on User Module\\
+\textbf{Internal Structure:}
+\begin{itemize}
+ \item       \textbf{Internal Methods:}
+\begin{itemize}
+    \item void makeStudentList(): instructor makes a list of students for each assignment
+    \item void makeQuestionList(): instructor makes a list of questions for each assignment
+    \end{itemize}
+       \item  \textbf{Internal Variables:}
+\begin{itemize}
+\item assignment: String[]
+ \item studentReport: studentReport
+ \item answerBank: String[]
+\end{itemize}
+ \end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item None
+\end{itemize}
+ 
+ 
+\chapter{Author}
+\textbf{Description: }Author module manages author's account. It provides interface to create new questions, add possible answers and feedback to individual question.\\
+\textbf{Interface Specifications:}
+\begin{itemize}
+    \item void createQuestion(): provides interface to make a new question, with question text/diagram options/feedback, uses create answer and create feedback
+    \item void draw(): provides an interface to draw a possible answer, gives an option whether to draw.
+    \end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item Logging in is handled by User Module, and account type is provided.
+\end{itemize}
+\textbf{Dependencies:}
+Depends on assignment and question, and drawing tool modules \\
+\textbf{Internal Structure:}
+\begin{itemize}
+\item          \textbf{Internal Methods:}
+\begin{itemize}
+    \item void createAnswer(): reads the input provided by author in a form of diagram of text
+    \item void createFeeback(): provides a way to create feedback for a created question
+\end{itemize}
+     \item     \textbf{Internal Variables:}
+     \begin{itemize}
+ \item answerBank: String[]
+ \end{itemize}
+ \end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item None
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%UML%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{UML 3}
+
+    \begin{figure}[H]
+            \centerline{\includegraphics[height=9cm, width=10cm]{Assignment.jpg}}
+            \caption{Assigments UML Diagram}
+    \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%UML%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\chapter{Assignment}
+
+\textbf{Description: }An instructor creates an assignment so that the instructor can add questions or question list to the assignment. Controls what the final assignment looks like before being assigned.\\
+\textbf{Interface Specifications:}
+\begin{itemize}
+\item void intialize(String Name) - Initialize an assignment with a specific name.
+\item void addQuestion(Question) - Add a question that is in the database to the assignment. Checks to see if ''Question'' is in the database. 
+\item void removeQuestion(Question) - Delete a specific question that is part of the assignment Checks to see if ''Question'' is the Question list.
+\item int count() - Counts the number of questions.
+\item boolean isQuestionInDB(Question) - Checks if the question is in the question database
+\end{itemize}
+\textbf{Assumption:}
+\begin{itemize}
+\item None 
+\end{itemize}
+\textbf{Dependencies:} None \\
+\textbf{Internal Structure:}
+\begin{itemize}
+\item \textbf{Internal Methods:}
+\begin{itemize}
+\item	void addList(questionList) - Add a list of questions to the assignment.
+\item void removeList(questionList) - Deletes the list of questions from the assignment. Checks to see if the list is in the assignment.
+\item void saveAssignment() - Save assignment to the assignment database
+\item	String getName() - returns name of the assignment
+\item	void changeName() - changes the name of the assignment
+\end{itemize}
+\item \textbf{Internal Variables:}
+\begin{itemize}
+\item	ArrayList[] Question
+\item	String Name
+\item	int count
+\end{itemize}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item None
+\end{itemize}
+
+
+
+\chapter{Question List}
+
+\textbf{Description: }It's a list of questions from which an instructor can choose to add the list to an assignment or view the list and then view individual questions. This list is used for a student to pick and choose which questions to answer in a specific assignment. \\ 
+\textbf{Interface Specifications:}
+\begin{itemize}
+\item void initialize() - Initialize a list for questions to be added in the future. This list can be added to assignments. This is called when an instructor wants to make a question list.
+
+\item void addQuestion(Question) - Add a question that is in the database to the question list. Checks to see if ''Question'' is in the database. 
+
+\item void removeQuestion(Question) - Delete a specific question that is part of the question list. Checks to see if ''Question'' is the Question list.
+
+\item int count() - Counts the number of questions.
+
+\item boolean isQuestionInDB(Question) - Checks if the question is in the question database
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+\item None
+\end{itemize}
+\textbf{Dependencies:} None \\
+\textbf{Internal Structure}
+\begin{itemize}
+\item	\textbf{Internal Methods}
+\begin{itemize}
+	\item boolean isEmpty() - Checks if the list is empty
+	\item void find(Question) - Searches for the question in the list
+\end{itemize}
+	\item \textbf{Internal Variables}
+	\begin{itemize}
+        \item ArrayList[] Questions;
+	    \item int count;
+    \end{itemize}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item None
+\end{itemize}
+
+
+
+\chapter{Question}
+
+\textbf{Description: }Questions can be made by the author. These questions will be added to the database and can be copied from the database and used for question list and assignments.\\
+\textbf{Interface Specifications:}
+\begin{itemize}
+    \item void addQuestion(Question) - adds the question to the database.
+    \item void removeQuestion(Question) - remove question from database.
+    \item boolean isQuestionInDB(Question) - Checks if the question is in the question database
+\end{itemize}
+\textbf{Assumption:}
+\begin{itemize}
+\item An Answer will be provided with the question.
+\end{itemize}
+\textbf{Dependencies:} None \\
+\textbf{Internal Structure:}
+\begin{itemize}
+	\item \textbf{Internal Methods:}
+	\begin{itemize}
+	\item Question makeQuestion(String Name); Makes a question to be added to the database
+of questions.
+    \item Diagram drawAnswer(); Make an answer to be assigned with this question.
+    \item void UpdateQuestion(); Updates the question, adds question to database
+    \end{itemize}
+\item 	\textbf{Internal Variables:}
+	\begin{itemize}
+	\item String Name;
+	\item Diagram Answer;
+	\item String Question;
+	\end{itemize}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item None
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Validator}
+\textbf{Description:}
+This module is responsible for validating a diagram provided by a student. compares it to the correct diagram created by the author which it retrieves from the database. Because there are multiple variations of the same diagram available, we also need to make sure to compare these variations to the correct diagram. \\
+\textbf{Interface Specification:}
+    \begin{itemize}
+            	\item diagram getCorrectDiagram(int): retrieves the solution from the database given question ID
+            \item	boolean validateSolution(diagram, diagram): compares input diagram and correct diagram and outputs whether they are equivalent
+    \item 	void sendFeedback(): send feedback provided by the author
+    String\\
+    \item getFeedback(int): retrieve feedback for a given question from database
+    \item void updateReport(): update student report given the result of comparison of student’s input with the correct diagram
+\end{itemize}
+ \textbf{Assumptions:}
+ \begin{itemize}
+        \item 	We are assuming that the correct answer for the diagram is in database and that the input comes in JSON format
+\end{itemize}
+\textbf{Dependencies:}
+
+        	This module depends on the Serializer and DBAccessor modules \\
+\textbf{Internal Structure:}
+\begin{itemize}
+\item\textbf{Internal Methods:}
+\begin{itemize}
+    \item  String[] constructAllVariation(diagram): make all possible variations of JSON strings corresponding to input diagram
+\textbf{Internal Variables:}
+               \end{itemize}
+\item\textbf{Internal Variables:}
+\begin{itemize}
+\item {None}
+\end{itemize}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item {None}
+\end{itemize}
+        	
+ 
+\chapter{DBAccessor}
+\textbf{Description:}
+This module is responsible for retrieving required information from the database such as user information, diagram and questions. \\
+\textbf{Interface Specification:}
+\begin{itemize}
+\item        	String getQuestion(int): retrieves question information from database provided
+ID of the question
+\item	void addQuestion(question): adds question to the database
+\item	void editQuestion(): edit questions
+        \item	String getAssignment(int): retrieves assignment information from database provided ID of the assignment
+\item	void addAssignment(): adds assignment to the database
+	\item void editAssignmnet(): edit assignment
+        \item 	String getSolution(int): retrieves JSON string pf the correct solution given question ID
+        \item 	String getUserInfo(int): retrieve all the information about the USER given his ID
+	\item String getFeedback(int): retrieves feedback provided by the author given the question ID
+	\item void updateFeedback(String, int): update or create new feedback given question ID
+        \item 	void getUserInfo(): retrieve user’s information such as name, ID etc
+\item 	void addUserInfo() create a new entry in user database
+\item 	void removeQuestion(int): removes question from the database given question ID
+\item 	void removeAssignment(): removes assignment from database
+\item 	void getStudentReport(): retrieves student report from
+the database\\
+\end{itemize}
+\textbf{Assumptions:}
+\begin{itemize}
+        \item	Correct name and password of the database are provided for this module
+        \end{itemize}
+\textbf{Dependencies:}
+        	This module depends on all modules using the database: User, Validator\\
+\textbf{Internal Structure:}
+\begin{itemize}
+\item \textbf{Internal Methods:}
+\begin{itemize}
+\item                    	void connectToDatabase(): establishes a connection to database using name and password provided
+\end{itemize}
+\item \textbf{Internal Variables:}
+\begin{itemize}
+\item                    	String databaseName: stores database name
+     \item   	        	String databasePassword: store the database password
+ \end{itemize}
+\end{itemize}
+\textbf{Hidden Information:}
+\begin{itemize}
+\item None
+\end{itemize}
+
