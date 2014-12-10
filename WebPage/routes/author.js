@@ -14,12 +14,3 @@ router.get('/addQ', function(req,res){
 
 	
 });
-//login handler
-router.post('/login', function(req, res) {
-	res.send('hello');
-	// 	req.logIn(user, function(err) {
-	// 		res.send();
-	// 		res.end();
-	// 	});
-	// })(req, res);
-});

@@ -12,15 +12,28 @@ h1 {
 	color:#95b43f;
 }
 
+.ink-grid {
+	padding:0;
+}
+
 #header {
+	padding-left:2em;
+	padding-right:2em;
 	border-bottom: solid 1px gray;
+}
+
+#footer {
+	margin:0;
+	padding-left:1em;
+	padding-right:1em;
+	width:100%;
 }
 
 #form {
 	margin-left:25%;
 	margin-top:5%;
 	margin-bottom:12%;
-	padding: 10px;
+	padding:10px;
 	padding-right: 40px;
 	border: solid 1px gray;
 }
@@ -36,4 +49,12 @@ h1 {
 
 #content {
 	min-height: 345px;
+}
+
+#sidebar {
+	margin-top:-3em;
+}
+
+#sidebarholder {
+	
 }

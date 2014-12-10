@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Question Number</title>
+        <title>Assignment List</title>
         <meta name="description" content="">
         <meta name="author" content="ink, cookbook, recipes">
         <meta name="HandheldFriendly" content="True">
@@ -113,8 +113,7 @@
                     <ul class="menu vertical black">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#">Assignments</a></li>
-                        <li><a href="#">Question Bank</a></li>
-						<li><a href="#">Student Report</a></li>
+						<li><a href="#"></a></li>
 						<li><a href="#"></a></li>
 						<li><a href="#"></a></li>
 						<li><a href="#"></a></li>
@@ -157,24 +156,66 @@
 			 
 			 
               
-				<div class="all-60">
+				<div class="all-80">
                     <article>
                         <header>
-                            <h1 class="push-left">Question Number</h1>
+                            <h1 class="push-left">Assignmnet List</h1>
+							
                            
                         </header>
-                        <summary>Question text stuff </summary>
-                        <figure class="ink-image vertical-space">
-                            <img src="holder.js/1200x600/auto/ink" alt="">
-                        </figure>
-						<summary>Feedback goes here</summary>
-						<form action="questionListInstructor.ejs">
-						<button class = "ink-button">Remove</button>
+						<style>
+						table, th, td {
+							border: 1px solid black;
+							border-collapse: collapse;
+						}
+						th, td {
+							padding: 5px;
+						}
+						</style>
+                        <table style="width:100%">
+							<tr>
+								<th>Assignment Number</th>
+								<th>Assignment Grade</th>
+							</tr>
+							<tr align="center">
+								<td>Assignment #1</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #2</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #3</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #4</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #5</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #6</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #7</td>
+								<td>Grade on Assignment</td>
+							</tr>
+						</table>
+						<form action="assignmentListStudent.ejs">
+						<button>Previous</button>
 						</form>
-
+						<form action="assignmentListStudent.ejs">
+						<button>Next</button>
+						</form>
 					
 						
 						
+                        
                     </article>
                 </div>
 				
@@ -185,6 +226,6 @@
             
             
         </div>
-       
+        
     </body>
 </html>
