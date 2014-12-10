@@ -1,7 +1,7 @@
 
     \chapter{Functional Requirements}
 %\section{Functional Requirements}
-    \begin{section}{Allow Student to Draw a Diagram}
+    \begin{section}{Allow Student to Draw a Diagram*}
         Description: Student given tools and space to draw an ER diagram \newline
         Primary Actor: Student \newline
         Precondition: Student is logged in and viewing a            question \newline
@@ -37,9 +37,9 @@
         Steps:
         \begin{enumerate}
             \item{Student submits answer by pressing the submit             button}
-            \item{System processes answer and decides validity}
+            \item{System processes answer and decides validity*}
             \item{Outputs feedback and/or grade for student to see}
-            \item{Answer is saved into database}
+            \item{Answer is saved into database*}
         \end{enumerate}
         Exceptions:
         \begin{itemize}
@@ -74,7 +74,7 @@
     \end{section}	
 	
 	%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor creates new assignment}
+    \begin{section}{Instructor creates new assignment*}
 		Description: Instructor creates new assignment for students to be completed \newline
 		Primary Actor: Instructor \newline
 		Precondition: Instructor is logged in into tutoring system \newline
@@ -85,11 +85,11 @@
         Steps:
         \begin{enumerate}
             \item{Instructor clicks on the Create new assignment button on his homepage.}
-            \item{Instructor chooses the class assignment is made for.}
-            \item{Instructor selects questions from database to be added to assignment.}
+            \item{Instructor chooses the class assignment is made for}
+            \item{Instructor selects questions from database to be added to assignment}
             \item{Instructor names the assignment}
-            \item{Instructor picks a deadline for the assignment.}
-            \item{Instructor clicks submit button .}
+            \item{Instructor picks a deadline for the assignment}
+            \item{Instructor clicks submit button}
             \item{Assignment is added to database}
         \end{enumerate}
         Exceptions:
@@ -100,7 +100,7 @@
 
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor Removes Assignment}
+    \begin{section}{Instructor Removes Assignment*}
 		The Instructor will be removing an assignment from the assignment list. \newline
 		Primary Actor: Instructor \newline
 		Precondition: There must be at least one assignment in the database. \newline
@@ -122,33 +122,8 @@
         \end{itemize}
     \end{section}		
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor adds/removes students to/from the assignment}
-		Description: Instructor adds or removes student who can view and complete a particular assignment \newline
-		Primary Actors: Instructor \newline
-		Precondition: Instructor is logged into the system \newline
-		Trigger: Instructor clicks on “add/remove students” button in the particular assignment \newline
-		Successful End Condition: Added students are able to see a particular assignment, while removed students can no longer see it \newline
-		Failed End Condition: Added student cannot see the assignment/removed students can see the assignment \newline
-        \newline
-        Steps:
-        \begin{enumerate}
-            \item{Instructor chooses assignment he wants to add/remove students to from the list of already created assignments.}
-            \item{Instructor clicks on “add/remove students” button.}
-            \item{Instructor is given an option to choose an already existing list of students.}
-            \item{Instructor can then choose individual students from student database.}
-            \item{Instructor then can remove any students from the list of students who have been added to the assignment.}
-            \item{Instructor then click on submit button.}
-			\item{List of students is updated in the database.}
-        \end{enumerate}
-        Exceptions:
-        \begin{itemize}
-            \item{Student is not found in the database.}
-        \end{itemize}
-    \end{section}
-	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{section}{Instructor adds/removes question from the question bank to the assignment}
+    \begin{section}{Instructor adds/removes question from the question bank to the assignment*}
 		Description: Instructor adds or removes questions for an already created assignment \newline
 		Primary Actor: Instructor \newline
 		Precondition:  Instructor is logged in \newline
@@ -550,7 +525,7 @@ Exceptions:
     \end{section}
     
     
-    \begin{section}{Author Copies a Question} 
+    \begin{section}{Author Copies a Question*} 
   
 Description: The author takes an existing question and copies it creating a new question.\\
 Primary Actor: Author\\
@@ -564,8 +539,6 @@ Steps:
 \item They choose to copy the question.
 \item They make any necessary edits and then save the question.
 \item The question is successfully copied.
-
-
 \end{enumerate}
 Successful End Condition: The copies a previously made question and is able to create a new one.\\
 Failed End Condition: The author is unable to successfully copy a question.
