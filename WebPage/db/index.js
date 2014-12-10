@@ -30,7 +30,48 @@ function getUser(callback ,name,lname) {
       callback(err);
     }
     else {
-      client.query('select * from users where fname ='+' \''+name +'\'', function (err, result) {
+      client.query('select * from users where username ='+' \''+name +'\'', function (err, result) {
+        // Ends the "transaction":
+        done();
+        // Disconnects from the database:
+        client.end();
+        if (err) {
+          callback(err);
+        }
+        else {
+          callback(undefined, result.rows);
+        }
+      });
+    }
+  });
+}
+function getLogin(name, pass,callback){
+	pg.connect(connString, function(err, client, done){
+	if(err){
+		callback(err,undefined);
+	}
+	else{
+		client.query('select * from users where username =' + ' \'' + name + '\'' + ' and password =' + ' \'' + pass + '\'', function(err,result){
+			done();
+			client.end();
+			if(err){
+				callback(err, undefined);
+			}
+			else {
+				callback(undefined, result.rows)
+			}
+		})
+	}
+	});
+}
+
+function addUser(name,password, callback) {
+  pg.connect(connString, function (err, client, done) {
+    if (err) {
+      callback(err);
+    }
+    else {
+      client.query('insert into * from users where username ='+' \''+name +'\'' + 'and password =' + ' \'' + password + '\'', function (err, result) {
         // Ends the "transaction":
         done();
         // Disconnects from the database:
@@ -46,10 +87,10 @@ function getUser(callback ,name,lname) {
   });
 }
 
-
+exports.addUser = addUser
 exports.getUsers =getUsers
 exports.getUser =getUser
-
+exports.login = getLogin
 
 
 //qeustion id qeustionbody(string) answers() feedback

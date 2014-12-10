@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var db = require('/home/ubuntu/KIWIServer/db/index');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -22,10 +23,27 @@ router.get('/studentHome', function(req,res){
 	res.end();
 })
 router.post('/studentCreate', function(req,res){
-
-	res.redirect('/studentHome');
-
-	res.end();
+	console.log("CREDS \n\n" + req.body.NetID);
+	db.addUser(req.body.NetID, req.body.Password, function(err, ret){
+		if(err)
+		{	console.log(err);
+			res.redirect('/login');
+			res.end();
+		}
+		else{
+			console.log("ret " +ret.length + "\n\n\n\n")
+			if(ret.length>0)
+			{
+				res.redirect('/studentHome');
+			}
+			else
+			{
+				res.redirect('/login');
+			}
+			res.end();
+		}
+	})
+	
 })
 router.get('/questionBankInstructor', function(req,res){
 	res.render('questionBankInstructor', {})
@@ -114,13 +132,39 @@ router.post('/studentHome', function(req,res){
 	res.end();
 })
 router.post('/login', function(req, res){
-	res.redirect('/studentHome');
+	console.log("ID " +req.body.Password + "\n\n\n\n")
+	
+	db.login(req.body.NetID, req.body.Password, function(err, ret){
+		if(err)
+		{	console.log(err);
+			res.redirect('/login');
+			res.end();
+		}
+		else{
+			console.log("ret " +ret.length + "\n\n\n\n")
+			if(ret.length>0)
+			{
+				res.redirect('/studentHome');
+			}
+			else
+			{
+				res.redirect('/login');
+			}
+			res.end();
+		}
+	})
 
+	
+})
+
+
+router.get('/sidebar', function(req,res){
+	res.render('sidebar.ejs', {})
 	res.end();
 })
-router.post('/studentCreation', function(req, res){
-	res.redirect('/studentHome');
+router.post('/sidebar', function(req,res){
+	res.render('sidebar.ejs', {})
+	res.end();
 })
-
 
 module.exports = router;

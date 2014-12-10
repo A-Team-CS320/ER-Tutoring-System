@@ -1,19 +1,18 @@
 drop table if exists users;
 
 create table users (
-  uid SERIAL,
+ 
   username varchar(50),
   password varchar(25),
-  grade int,
-  primary key (uid)
+  grade int
   );
 
 
-insert into users values (1, 'John', 'xxxx', 0);
-insert into users values (2, 'Jane', 'yyyy', 0);
-insert into users values (3, 'Bill', 'aaaa', 0);
-insert into users values (4, 'Veb', 'bbbb', 0);
-insert into users values (5, 'Hazel', 'cccc', 0);
-insert into users values (6, 'Caleb', 'dddd', 0);
-insert into users values (7, 'Aiden', 'eeee', 0);
+insert into users values ( 'John', 'xxxx', 0);
+insert into users values ( 'Jane', 'yyyy', 0);
+insert into users values ( 'Bill', 'aaaa', 0);
+insert into users values ( 'Veb', 'bbbb', 0);
+insert into users values ( 'Hazel', 'cccc', 0);
+insert into users values ( 'Caleb', 'dddd', 0);
+insert into users values ( 'Aiden', 'eeee', 0);
 

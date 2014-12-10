@@ -1,6 +1,5 @@
 body {
-  /*padding: 50px;*/
-  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  margin-top: -2em;
   background-color: #fbfbfb;
 }
 
@@ -17,12 +16,14 @@ h1 {
 }
 
 #header {
+	padding-top:1.5em;
 	padding-left:2em;
 	padding-right:2em;
 	border-bottom: solid 1px gray;
 }
 
 #footer {
+	background-color: #f2f2f2;
 	margin:0;
 	padding-left:1em;
 	padding-right:1em;
@@ -48,13 +49,27 @@ h1 {
 }
 
 #content {
-	min-height: 345px;
+	min-height: 525px;
+	background-color: #fbfbfb;
 }
 
 #sidebar {
-	margin-top:-3em;
+	position: relative;
+	float: left;
+	width: 137px;
+	min-height: 525px;
+	height:100%;
+	z-index: 0;
+	background-color: black;
+	margin-top: -2em;
 }
 
-#sidebarholder {
-	
+#sidebar nav{
+	margin:0;
+}
+
+#logoutbutton {
+	position:absolute;
+	bottom:0px;
+	width:100%;
 }
