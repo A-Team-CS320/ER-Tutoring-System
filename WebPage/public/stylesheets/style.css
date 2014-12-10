@@ -1,0 +1,39 @@
+body {
+  /*padding: 50px;*/
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  background-color: #fbfbfb;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+	color:#95b43f;
+}
+
+#header {
+	border-bottom: solid 1px gray;
+}
+
+#form {
+	margin-left:25%;
+	margin-top:5%;
+	margin-bottom:12%;
+	padding: 10px;
+	padding-right: 40px;
+	border: solid 1px gray;
+}
+
+#submit {
+	padding-left:15%;
+	margin-left:10%;
+}
+
+#create {
+	margin-left: 20%;
+}
+
+#content {
+	min-height: 345px;
+}

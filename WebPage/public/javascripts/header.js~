@@ -1,0 +1,5 @@
+function loadPage(){
+   	$( "#result" ).load( "footer.html", function() {
+	alert( "Load was performed." );
+	});
+}

@@ -1,0 +1,15 @@
+                <form action="" class="ink-form all-50 small-100 tiny-100">
+                    <fieldset>
+                        <div class="control-group required column-group gutters">
+                            <label for="first-name" class="all-20 align-right">Name</label>
+                            <div class="control all-40">
+                                <input type="text" id="first-name">
+                                <p class="tip">First Name</p>
+                            </div>
+                            <div class="control all-40">
+                                <input type="text" id="last-name">
+                                <p class="tip">Last Name</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>

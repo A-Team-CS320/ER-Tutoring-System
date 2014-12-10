@@ -1,0 +1,38 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('login.ejs', {});
+  
+	  res.end();
+});
+
+router.get('/widgetTemplate', function(req, res){
+	res.render('header.html',function(error,html){
+		res.send(html)
+	});
+	res.end();
+});
+router.get('/login.ejs', function(req,res){
+	res.render('login.ejs', {});
+	res.end();
+})
+
+router.get('/footer.ejs', function(req,res){
+	res.render('footer.ejs', {});
+	res.end();
+})  
+router.post('/studentHome.ejs', function(req,res){
+	res.render('header.ejs', {});
+	res.render('studentHome.ejs', {});
+	res.render('footer.ejs',{});
+	res.end();
+})
+router.post('/studentCreate.ejs', function(req,res){
+	res.render('header.ejs', {});
+	res.render('studentCreate.ejs', function(req,res){});
+	res.render('footer.ejs',{});
+	res.end();
+})
+module.exports = router;

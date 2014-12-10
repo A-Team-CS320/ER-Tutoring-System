@@ -1,0 +1,40 @@
+{
+  "name": "OOverlap",
+  "version": "0.0.0",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "~0.0.3",
+    "body-parser": "~1.8.1",
+    "compression": "^1.2.0",
+    "connect-mongo": "~0.4.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.0.0",
+    "ejs": "~0.8.5",
+    "express": "~4.9.0",
+    "express-flash": "~0.0.2",
+    "express-session": "~1.9.1",
+    "express-validator": "~2.6.0",
+    "google-calendar": "~1.3.1",
+    "less-middleware": "1.0.x",
+    "lodash": "~2.4.1",
+    "mailgun-js": "~0.6.7",
+    "moment" : "~2.8.4",
+    "mongodb": "~1.4.19",
+    "mongoose": "~3.8.18",
+    "morgan": "~1.3.0",
+    "nodemailer": "~1.3.0",
+    "passport": "~0.2.1",
+    "passport-facebook": "~1.0.3",
+    "passport-google-oauth": "~0.1.5",
+    "passport-local": "~1.0.0",
+    "serve-favicon": "~2.1.3",
+    "validator": "~3.22.1",
+    "google-refresh-token": "^0.5.3"
+  }
+}

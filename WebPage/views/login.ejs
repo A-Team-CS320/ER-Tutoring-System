@@ -1,0 +1,29 @@
+<% include header %>
+
+<form action="/login" class="ink-form all-50 small-100 tiny-100" id="form" method="post">
+    <fieldset>
+        <div class="control-group required column-group gutters">
+            <label for="NetID" class="all-20 align-right">Login</label>
+            <div class="control all-40">
+                <input type="text" id="NetID">
+                <p class="tip">NetID</p>
+            </div>
+            <div class="control all-40">
+                <input type="text" id="Password">
+                <p class="tip">Password</p>
+            </div>
+       <form action = "studentHome.ejs" class="ink-form all-50 small-100 tiny-100" id="formSub" method = "post">
+            <div id="submit" class="control all-40">
+                <input class="ink-button" type="submit" value="Submit">
+            </div>
+       </form>
+       <form action = "/author/login" class = "ink-form all-50 small-100 tiny-100" id="formSub" method = "post">
+			<div id = "create" class="control all-40">
+				<button class = "ink-button"> Create</button>
+			</div>
+		</form>
+        </div>
+    </fieldset>
+</form>
+
+<% include footer %>

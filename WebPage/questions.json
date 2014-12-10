@@ -1,0 +1,13 @@
+{
+    "questionID":  "1", 
+    "questionBody":   "DB schema of the question", 
+    "answers": [
+        "solution1",
+        {
+            "anser1":  "FIRST SOLUTION HERE",
+		"anser2":  "SECOND SOLUTION HERE"
+            
+		
+        }
+    ]    
+}
