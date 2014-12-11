@@ -71,7 +71,7 @@ function addUser(name,password, callback) {
       callback(err);
     }
     else {
-      client.query('insert into * from users where username ='+' \''+name +'\'' + 'and password =' + ' \'' + password + '\'', function (err, result) {
+      client.query('insert into users(username, password, grade)  values ( ' + '\''+ name+ '\', ' + password + ', 0 )' , function (err, result) {
         // Ends the "transaction":
         done();
         // Disconnects from the database:
