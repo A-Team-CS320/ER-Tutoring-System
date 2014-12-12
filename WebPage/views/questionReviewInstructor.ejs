@@ -1,5 +1,5 @@
 <% include header %>
-<% include sidebarAuthor %>
+<% include sidebarInstructor %>
         <style type="text/css">
 
             body {
@@ -56,41 +56,39 @@
 
             <!-- Add your site or application content here -->
 
-           
+            
 
             
-			<div class="column-group gutters article">
- 
+			 
+			<div class="column-group gutters article"> 
 			 
               
 				<div class="all-60">
                     <article>
                         <header>
-                            <h1 class="push-left">Question Number</h1>
+                            <h1 class="push-left">Question #1</h1>
                            
                         </header>
-                        <summary>Question text stuff </summary>
+                        <summary>Draw a Chen-style diagram with two entities and one relation.</summary>
                         <figure class="ink-image vertical-space">
                             <div id="myHolder"></div>
                         </figure>
-						<summary>Feedback goes here</summary>
-						<form action="questionEditAuthor">
-						<button style="float:left;" class = "ink-button">Edit</button>
+						<summary>Feedback: Don't forget, you need two entities and a relation between them!</summary>
+						<form action="questionListInstructor">
+						<button style="float:left;" class = "ink-button">Remove</button>
 						</form>
-						<form action="questionBankAuthor">
-						<button style="float:left;" class = "ink-button">Delete</button>
-						</form>
-						<form action="questionBankAuthor">
+						<form action="questionListInstructor">
 						<button style="float:right;" class = "ink-button">Back</button>
 						</form>
+
 					
 						
 						
                     </article>
                 </div>
 				
-	</div>			
 				
+			</div>	
 				
 				
             
@@ -98,9 +96,11 @@
         </div>
 <% include footer %>
 
+
 <link rel="stylesheet" type="text/css" href="http://www.jointjs.com/downloads/joint.css" />
 <script type="text/javascript" src="http://www.jointjs.com/downloads/joint.js" ></script>
 <script type="text/javascript" src="javascripts/joint.shapes.erd.js" > </script>
+
 <script>
 $(function () {
 $(document).ready(function(){

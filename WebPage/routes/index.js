@@ -126,14 +126,63 @@ router.post('/studentReportInstructor', function(req,res){
 	res.end();
 })
 
+router.get('/questionBankAuthor', function(req,res){
+	res.render('questionBankAuthor', {})
+	res.end();
+})
+router.post('/questionBankAuthor', function(req,res){
+	res.render('questionBankAuthor', {})
+	res.end();
+})
+
+router.get('/assignmentListInstructor', function(req,res){
+	res.render('assignmentListInstructor', {})
+	res.end();
+})
+router.post('/assignmentListInstructor', function(req,res){
+	res.render('assignmentListInstructor', {})
+	res.end();
+})
+
+router.get('/questionReviewInstructor', function(req,res){
+	res.render('questionReviewInstructor', {})
+	
+})
+router.post('/questionReviewInstructor', function(req,res){
+	res.render('questionReviewInstructor', {})
+	
+})
+
 router.post('/studentHome', function(req,res){
 	res.render('studentHome.ejs', {});
 
 	res.end();
 })
+router.get('/questionFeedbackStudent', function(req, res){
+	res.render('questionFeedbackStudent', {});
+	res.end()
+})
+
+router.post('/questionFeedbackStudent', function(req, res){
+	res.render('questionFeedbackStudent', {});
+	res.end()
+})
+	
 router.post('/login', function(req, res){
 	console.log("ID " +req.body.Password + "\n\n\n\n")
-	
+	if(req.body.NetID=="Gordon")
+	{
+		res.redirect('/assignmentListInstructor');
+		res.end();
+		
+	}
+	else if(req.body.NetID =="Nick")
+	{
+		
+		res.redirect('/questionBankAuthor')
+		res.end();
+	}
+	else{
 	db.login(req.body.NetID, req.body.Password, function(err, ret){
 		if(err)
 		{	console.log(err);
@@ -154,7 +203,7 @@ router.post('/login', function(req, res){
 		}
 	})
 
-	
+}
 })
 
 
@@ -165,6 +214,36 @@ router.get('/sidebar', function(req,res){
 router.post('/sidebar', function(req,res){
 	res.render('sidebar.ejs', {})
 	res.end();
+})
+
+router.get('/sidebarInstructor', function(req,res){
+	res.render('sidebarInstructor.ejs', {})
+	res.end();
+})
+router.post('/sidebarInstructor', function(req,res){
+	res.render('sidebarInstructor.ejs', {})
+	res.end();
+})
+
+router.get('/sidebarAuthor', function(req,res){
+	res.render('sidebarAuthor.ejs', {})
+	res.end();
+})
+router.post('/sidebarAuthor', function(req,res){
+	res.render('sidebarAuthor.ejs', {})
+	res.end();
+})
+
+router.get('/ERQuestion', function(req,res){
+	res.render('Test.ejs', {});
+})
+
+router.get('/toolbox', function(req,res){
+	res.render('toolbox.ejs', {});
+})
+
+router.post('/toolbox', function(req,res){
+	res.render('toolbox.ejs', {});
 })
 
 module.exports = router;

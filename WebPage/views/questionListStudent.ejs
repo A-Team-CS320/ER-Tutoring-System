@@ -1,50 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Assignment Number</title>
-        <meta name="description" content="">
-        <meta name="author" content="ink, cookbook, recipes">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-        <!-- Place favicon.ico and apple-touch-icon(s) here  -->
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <link rel="apple-touch-icon" href="../img/touch-icon-iphone.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../img/touch-icon-ipad.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../img/touch-icon-iphone-retina.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../img/touch-icon-ipad-retina.png">
-        <link rel="apple-touch-startup-image" href="../img/splash.320x460.png" media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="../img/splash.768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="../img/splash.1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
-
-        <!-- load inks CSS -->
-        <link rel="stylesheet" type="text/css" href="../css/ink-flex.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-
-        <!-- load inks CSS for IE8 -->
-        <!--[if lt IE 9 ]>
-            <link rel="stylesheet" href="../css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <![endif]-->
-
-        <!-- test browser flexbox support and load legacy grid if unsupported -->
-        <script type="text/javascript" src="../js/modernizr.js"></script>
-        <script type="text/javascript">
-            Modernizr.load({
-              test: Modernizr.flexbox,
-              nope : '../css/ink-legacy.min.css'
-            });
-        </script>
-
-        <!-- load inks javascript files -->
-        <script type="text/javascript" src="../js/holder.js"></script>
-        <script type="text/javascript" src="../js/ink-all.min.js"></script>
-        <script type="text/javascript" src="../js/autoload.js"></script>
-
+<% include header %>
+<% include sidebar %>
 
         <style type="text/css">
 
@@ -85,7 +40,6 @@
                 background: #ccc;
             }
         </style>
-    </head>
 
     <body>
 
@@ -105,14 +59,14 @@
 
             
 
-            
+            <div class="column-group gutters article">
 			 
 			 
               
 				<div class="all-80">
                     <article>
                         <header>
-                            <h1 class="push-left">Assignment Number</h1>
+                            <h1 class="push-left">Assignment #1</h1>
 							
                            
                         </header>
@@ -132,57 +86,57 @@
 								<th>Grade</th>
 							</tr>
 							<tr align="center">
-								<td>Question #1</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #1</a></td>
+								<td>Draw a Chen-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 							<tr align="center">
-								<td>Question #2</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #2</a></td>
+								<td>Draw a Crow's Foot-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 							<tr align="center">
-								<td>Question #3</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #3</a></td>
+								<td>Draw a Chen-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 							<tr align="center">
-								<td>Question #4</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #4</a></td>
+								<td>Draw a Crow's Foot-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 							<tr align="center">
-								<td>Question #5</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #5</a></td>
+								<td>Draw a Chen-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 							<tr align="center">
-								<td>Question #6</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #6</a></td>
+								<td>Draw a Crow's Foot-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 							<tr align="center">
-								<td>Question #7</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #7</a></td>
+								<td>Draw a Chen-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 							<tr align="center">
-								<td>Question #8</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #8</a></td>
+								<td>Draw a Crow's Foot-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 							<tr align="center">
-								<td>Question #9</td>
-								<td>Description of Question</td>
+								<td id="hiddenbutton"><a href="/questionSubmitStudent">Question #9</a></td>
+								<td>Draw a Chen-style ER diagram.</td>
 								<td>0/10</td>
 							</tr>
 						</table>
-						<form action="questionListStudent.ejs">
+<!-- 						<form action="questionListStudent">
 						<button>Previous</button>
 						</form>
-						<form action="questionListStudent.ejs">
+						<form action="questionListStudent.">
 						<button>Next</button>
-						</form>
+						</form> -->
 					
 						
 						
@@ -193,10 +147,9 @@
 				
 				
 				
-				
+			</div>	
             
             
         </div>
         
-    </body>
-</html>
+<%include footer %>

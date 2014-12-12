@@ -1,51 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Question Number</title>
-        <meta name="description" content="">
-        <meta name="author" content="ink, cookbook, recipes">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-        <!-- Place favicon.ico and apple-touch-icon(s) here  -->
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <link rel="apple-touch-icon" href="../img/touch-icon-iphone.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../img/touch-icon-ipad.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../img/touch-icon-iphone-retina.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../img/touch-icon-ipad-retina.png">
-        <link rel="apple-touch-startup-image" href="../img/splash.320x460.png" media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="../img/splash.768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="../img/splash.1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
-
-        <!-- load inks CSS -->
-        <link rel="stylesheet" type="text/css" href="../css/ink-flex.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-
-        <!-- load inks CSS for IE8 -->
-        <!--[if lt IE 9 ]>
-            <link rel="stylesheet" href="../css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <![endif]-->
-
-        <!-- test browser flexbox support and load legacy grid if unsupported -->
-        <script type="text/javascript" src="../js/modernizr.js"></script>
-        <script type="text/javascript">
-            Modernizr.load({
-              test: Modernizr.flexbox,
-              nope : '../css/ink-legacy.min.css'
-            });
-        </script>
-
-        <!-- load inks javascript files -->
-        <script type="text/javascript" src="../js/holder.js"></script>
-        <script type="text/javascript" src="../js/ink-all.min.js"></script>
-        <script type="text/javascript" src="../js/autoload.js"></script>
-
-
+<% include header %>
+<% include sidebarAuthor %>
         <style type="text/css">
 
             body {
@@ -85,7 +39,6 @@
                 background: #ccc;
             }
         </style>
-    </head>
 
     <body>
 
@@ -105,7 +58,7 @@
 
             
 
-            
+            <div class="column-group gutters article">
 			 
 			 
 			 
@@ -118,38 +71,183 @@
                         </header>
                         <summary>Question text stuff </summary>
                         <figure class="ink-image vertical-space">
-                            <img src="holder.js/1200x600/auto/ink" alt="">
+                            <div id="myHolder"></div>
                         </figure>
 						<summary>Feedback goes here</summary>
-						<form action="questionReviewAuthor.ejs">
-						<button class = "ink-button">Save</button>
+						<form action="questionReviewAuthor">
+						<button style="float:left;" class = "ink-button">Save</button>
 						</form>
-						<form action="questionBankAuthor.ejs">
-						<button class = "ink-button">Back</button>
+						<form action="questionBankAuthor">
+						<button style="float:right;" class = "ink-button">Back</button>
 						</form>
 
 					
 						
 						
                     </article>
-                </div>
+               
 				
-				<div class="">
-					<header>
-						<h1 class = "">TOOLBOX AREA</h1>
-						
 				
-					</header>
-					
 				</div>
 				
-				
-				
-				
+                                
+                <div class="">
+                            <div class="ink-grid">
+
+            <!--[if lte IE 9 ]>
+            <div class="ink-alert basic" role="alert">
+                <button class="ink-dismiss">&times;</button>
+                <p>
+                    <strong>You are using an outdated Internet Explorer version.</strong>
+                    Please <a href="http://browsehappy.com/">upgrade to a modern  browser</a> to improve your web experience.
+                </p>
+            </div>
+            <![endif]-->
+
+            <!-- Add your site or application content here -->
+
+            
+
+                
+                <div id="toolbox" class="column-group gutters article">
+                    <header>
+
+                        <h1 class = "">TOOLBOX</h1>
+
+                        <div class="ink-flex push-left vertical">
+                        <!-- <form style="float: left" action=""> -->
+                        <img id="t1" draggable="true" class="tool" src="attribute.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="padding-left: 10px" action=""> -->
+                        <img id ="t2" draggable="true" class="tool" src="entity.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="float: left" action=""> -->
+                        <img id ="t3" draggable="true" class="tool" src="relationship.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form action=""> -->
+                        <img id ="t4" draggable="true" class="tool" src="text.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="float: left" action=""> -->
+                        <img id ="t5" draggable="true" class="tool" src="chenManyToMany.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form action=""> -->
+                        <img id ="t6" draggable="true" class="tool" src="chenManyToOne.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="float: left" action=""> -->
+                        <img id ="t7" draggable="true" class="tool" src="chenOneToMany.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form action=""> -->
+                        <img id ="t8" draggable="true" class="tool" src="chenOneToOne.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="float: left" action=""> -->
+                        <img id ="t9" draggable="true" class="tool" src="crowManyToMany.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form action=""> -->
+                        </div>
+                        <div class="ink-flex push-left vertical">
+                        <img id ="t10" draggable="true" class="tool" src="crowManyToOne.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="float: left" action=""> -->
+                        <img id ="t11" draggable="true" class="tool" src="crowOneToMany.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form action=""> -->
+                        <img id ="t12" draggable="true" class="tool" src="crowOneToOne.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="float: left" action=""> -->
+                        <img id ="t13" draggable="true" class="tool" src="oneAndOnlyOne.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form action=""> -->
+                        <img id ="t14" draggable="true" class="tool" src="oneOrMore.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="float: left" action=""> -->
+                        <img id ="t15" draggable="true" class="tool" src="zeroOrMore.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form action=""> -->
+                        <img id ="t16" draggable="true" class="tool" src="zeroOrOne.jpg" name="image" width="48" height="48">
+                        <!-- </form> -->
+                        <!-- <form style="float: left" action=""> -->
+                        <img id ="t17" draggable="true" class="tool" src="line.jpg" name="image" width="48" height="48"><br>
+                        <!-- </form> -->
+                       </div>
+
+                       </header>
+                </div>
+                
+                
+            
+            
+        </div>
+
+
 				
             
             
         </div>
-       
-    </body>
-</html>
+<% include footer %>
+
+
+<link rel="stylesheet" type="text/css" href="http://www.jointjs.com/downloads/joint.css" />
+<script type="text/javascript" src="http://www.jointjs.com/downloads/joint.js" ></script>
+<script type="text/javascript" src="javascripts/joint.shapes.erd.js" > </script>
+<script>
+$(function () {
+$(document).ready(function(){
+var graph = new joint.dia.Graph;
+
+var paper = new joint.dia.Paper({
+    el: $('#myHolder'),
+    width: 800,
+    height: 600,
+    gridSize: 1,
+    model: graph
+});
+
+var erd = joint.shapes.erd;
+console.log(erd)
+
+var element = function(elm, x, y, label) {
+    var cell = new elm({ position: { x: x, y: y }, attrs: { text: { text: label }}});
+    graph.addCell(cell);
+    return cell;
+};
+
+var link = function(elm1, elm2) {
+    var myLink = new erd.Line({ source: { id: elm1.id }, target: { id: elm2.id }});
+    graph.addCell(myLink);
+    return myLink;
+};
+
+var x =100
+var y = 100 
+
+$("#t1").click(function(){
+var temp = element(erd.Key, x, y, "Key");
+x+=10
+y+=5
+});
+$("#t2").click(function(){
+var temp = element(erd.Entity, x, y, "Entity");
+x+=10
+y+=5
+});
+$("#t3").click(function(){
+var temp = element(erd.IdentifyingRelationship, x, y, "IR");
+x+=10
+y+=5
+});
+
+
+
+$(document).keypress(function( event ) {
+  if ( event.which == 13 ) {
+     graph.clear()
+     x = 100
+     y = 100
+  }
+  
+ 
+});
+
+});
+});
+</script>

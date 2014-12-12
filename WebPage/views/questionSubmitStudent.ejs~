@@ -1,5 +1,6 @@
 <% include header %>
 <% include sidebar %>
+
         <style type="text/css">
 
             body {
@@ -40,6 +41,8 @@
             }
         </style>
 
+    </head>
+
     <body>
 
         <div class="ink-grid">
@@ -58,6 +61,8 @@
 
             
 
+            
+			 
             <div class="column-group gutters article">
 			 
 			 
@@ -68,25 +73,30 @@
                             <h1 class="push-left">Question #1</h1>
                            
                         </header>
-                       <!--  <summary>Question text stuff </summary>
-                       <figure class="ink-image vertical-space">
+                        <summary>Draw a Chen-style ER diagram with two entities and a one-to-one relation between them.</summary>
+                        <figure class="ink-image vertical-space">
                             <img src="holder.js/1200x600/auto/ink" alt="">
-                        </figure> -->
-						<summary>Good job you're correct!</summary>
-						<form action="questionListStudent">
-						<button style="float:right;" class = "ink-button">Back</button>
+                        </figure>
+						<form action="questionFeedbackStudent.ejs">
+						<button class = "ink-button" id="previous">Submit</button>
 						</form>
-
+						<form action="questionListStudent.ejs">
+						<button class = "ink-button" id="next">Back</button>
+						</form>
 					
 						
 						
-                        
                     </article>
                 </div>
 				
+				<div class="">
+					<% include toolbox %>
+				</div>
 				
-			</div>
+				
+			</div>	
             
             
         </div>
+        
 <% include footer %>

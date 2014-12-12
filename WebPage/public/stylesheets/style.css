@@ -11,6 +11,20 @@ h1 {
 	color:#95b43f;
 }
 
+h1 a{
+	color:#95b43f;
+}
+
+h1 a:hover {
+	text-decoration: none;
+	color:#95b43f;
+}
+
+#hiddenbutton a{
+	text-decoration: none;
+	color: black;
+}
+
 .ink-grid {
 	padding:0;
 }
@@ -48,16 +62,25 @@ h1 {
 	margin-left: 20%;
 }
 
+#createbutton {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
 #content {
 	min-height: 525px;
 	background-color: #fbfbfb;
 }
 
+#innercontent {
+	margin-left: 2em;
+}
+
 #sidebar {
 	position: relative;
 	float: left;
-	width: 137px;
-	min-height: 525px;
+	max-width: 137px;
+	min-height: 762px;
 	height:100%;
 	z-index: 0;
 	background-color: black;
@@ -72,4 +95,27 @@ h1 {
 	position:absolute;
 	bottom:0px;
 	width:100%;
+}
+
+#previous {
+	float:left;
+}
+
+#next {
+	float:right;
+}
+
+#toolbox {
+	float:left;
+	padding: 10px;
+	margin-left: 10%;
+	border: solid 1px gray;
+	box-shadow: gray 2px 2px 2px;
+}
+
+.tool {
+	margin: 10px;
+	z-index: 1;
+	float:left;
+	border: solid 1px black;
 }

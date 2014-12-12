@@ -1,5 +1,6 @@
 <% include header %>
-<% include sidebar %>
+<% include sidebarInstructor %>
+
         <style type="text/css">
 
             body {
@@ -40,6 +41,7 @@
             }
         </style>
 
+
     <body>
 
         <div class="ink-grid">
@@ -56,27 +58,70 @@
 
             <!-- Add your site or application content here -->
 
-            
+           
 
-            <div class="column-group gutters article">
+            
 			 
 			 
               
-				<div class="all-60">
+		<div class="all-80">
                     <article>
                         <header>
-                            <h1 class="push-left">Question #1</h1>
+                            <h1 class="push-left">Assignmnet List</h1>
+							<form action="questionListInstructor.ejs">
+							<button>New</button>
+							</form>
                            
                         </header>
-                       <!--  <summary>Question text stuff </summary>
-                       <figure class="ink-image vertical-space">
-                            <img src="holder.js/1200x600/auto/ink" alt="">
-                        </figure> -->
-						<summary>Good job you're correct!</summary>
-						<form action="questionListStudent">
-						<button style="float:right;" class = "ink-button">Back</button>
+						<style>
+						table, th, td {
+							border: 1px solid black;
+							border-collapse: collapse;
+						}
+						th, td {
+							padding: 5px;
+						}
+						</style>
+                        <table style="width:100%">
+							<tr>
+								<th>Assignment Number</th>
+								<th>Assignment Grade</th>
+							</tr>
+							<tr align="center">
+								<td>Assignment #1</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #2</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #3</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #4</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #5</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #6</td>
+								<td>Grade on Assignment</td>
+							</tr>
+							<tr align="center">
+								<td>Assignment #7</td>
+								<td>Grade on Assignment</td>
+							</tr>
+						</table>
+						<form action="assignmentListInstructor">
+						<button>Previous</button>
 						</form>
-
+						<form action="assignmentListInstructor">
+						<button>Next</button>
+						</form>
 					
 						
 						
@@ -85,8 +130,10 @@
                 </div>
 				
 				
-			</div>
+				
+				
+				
             
             
         </div>
-<% include footer %>
+ <% include footer %>
